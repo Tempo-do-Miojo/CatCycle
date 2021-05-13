@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B3B3BC2264D576800B860CA /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 7B3B3BC1264D576800B860CA /* .swiftlint.yml */; };
 		7BB6E6F7264D526F009EA067 /* CatCycleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB6E6F6264D526F009EA067 /* CatCycleApp.swift */; };
 		7BB6E6F9264D526F009EA067 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB6E6F8264D526F009EA067 /* ContentView.swift */; };
 		7BB6E6FB264D5270009EA067 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BB6E6FA264D5270009EA067 /* Assets.xcassets */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7B3B3BC1264D576800B860CA /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		7BB6E6F3264D526F009EA067 /* CatCycle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatCycle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BB6E6F6264D526F009EA067 /* CatCycleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatCycleApp.swift; sourceTree = "<group>"; };
 		7BB6E6F8264D526F009EA067 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -99,6 +101,11 @@
 		7BB6E6F5264D526F009EA067 /* CatCycle */ = {
 			isa = PBXGroup;
 			children = (
+				7B3B3BC1264D576800B860CA /* .swiftlint.yml */,
+				7BB6E729264D534B009EA067 /* Shared */,
+				7BB6E728264D5340009EA067 /* Model */,
+				7BB6E727264D532F009EA067 /* ViewModel */,
+				7BB6E726264D5323009EA067 /* View */,
 				7BB6E6F6264D526F009EA067 /* CatCycleApp.swift */,
 				7BB6E6F8264D526F009EA067 /* ContentView.swift */,
 				7BB6E6FA264D5270009EA067 /* Assets.xcassets */,
@@ -136,6 +143,34 @@
 			path = CatCycleUITests;
 			sourceTree = "<group>";
 		};
+		7BB6E726264D5323009EA067 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7BB6E727264D532F009EA067 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		7BB6E728264D5340009EA067 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7BB6E729264D534B009EA067 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -146,6 +181,7 @@
 				7BB6E6EF264D526F009EA067 /* Sources */,
 				7BB6E6F0264D526F009EA067 /* Frameworks */,
 				7BB6E6F1264D526F009EA067 /* Resources */,
+				7BB6E72A264D53E0009EA067 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -239,6 +275,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B3B3BC2264D576800B860CA /* .swiftlint.yml in Resources */,
 				7BB6E6FE264D5270009EA067 /* Preview Assets.xcassets in Resources */,
 				7BB6E6FB264D5270009EA067 /* Assets.xcassets in Resources */,
 			);
@@ -259,6 +296,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7BB6E72A264D53E0009EA067 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7BB6E6EF264D526F009EA067 /* Sources */ = {
