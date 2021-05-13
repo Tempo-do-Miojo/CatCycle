@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		7B3B3BC2264D576800B860CA /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 7B3B3BC1264D576800B860CA /* .swiftlint.yml */; };
+		7B3B3BC6264D598C00B860CA /* home in Resources */ = {isa = PBXBuildFile; fileRef = 7B3B3BC5264D598C00B860CA /* home */; };
+		7B3B3BC8264D59B600B860CA /* homeViewModel in Resources */ = {isa = PBXBuildFile; fileRef = 7B3B3BC7264D59B600B860CA /* homeViewModel */; };
+		7B3B3BCA264D59C500B860CA /* homeModel in Resources */ = {isa = PBXBuildFile; fileRef = 7B3B3BC9264D59C500B860CA /* homeModel */; };
+		7B3B3BD0264D5A1A00B860CA /* calendarViewModel in Resources */ = {isa = PBXBuildFile; fileRef = 7B3B3BCF264D5A1A00B860CA /* calendarViewModel */; };
+		7B3B3BD2264D5A2600B860CA /* calendar in Resources */ = {isa = PBXBuildFile; fileRef = 7B3B3BD1264D5A2600B860CA /* calendar */; };
+		7B3B3BD4264D5A3300B860CA /* calendarModel in Resources */ = {isa = PBXBuildFile; fileRef = 7B3B3BD3264D5A3300B860CA /* calendarModel */; };
+		7B3B3BE1264D5ACF00B860CA /* onboardingViewModel in Resources */ = {isa = PBXBuildFile; fileRef = 7B3B3BE0264D5ACF00B860CA /* onboardingViewModel */; };
 		7BB6E6F7264D526F009EA067 /* CatCycleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB6E6F6264D526F009EA067 /* CatCycleApp.swift */; };
 		7BB6E6F9264D526F009EA067 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB6E6F8264D526F009EA067 /* ContentView.swift */; };
 		7BB6E6FB264D5270009EA067 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BB6E6FA264D5270009EA067 /* Assets.xcassets */; };
@@ -37,6 +44,15 @@
 
 /* Begin PBXFileReference section */
 		7B3B3BC1264D576800B860CA /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		7B3B3BC5264D598C00B860CA /* home */ = {isa = PBXFileReference; lastKnownFileType = text; path = home; sourceTree = "<group>"; };
+		7B3B3BC7264D59B600B860CA /* homeViewModel */ = {isa = PBXFileReference; lastKnownFileType = text; path = homeViewModel; sourceTree = "<group>"; };
+		7B3B3BC9264D59C500B860CA /* homeModel */ = {isa = PBXFileReference; lastKnownFileType = text; path = homeModel; sourceTree = "<group>"; };
+		7B3B3BCF264D5A1A00B860CA /* calendarViewModel */ = {isa = PBXFileReference; lastKnownFileType = text; path = calendarViewModel; sourceTree = "<group>"; };
+		7B3B3BD1264D5A2600B860CA /* calendar */ = {isa = PBXFileReference; lastKnownFileType = text; path = calendar; sourceTree = "<group>"; };
+		7B3B3BD3264D5A3300B860CA /* calendarModel */ = {isa = PBXFileReference; lastKnownFileType = text; path = calendarModel; sourceTree = "<group>"; };
+		7B3B3BE0264D5ACF00B860CA /* onboardingViewModel */ = {isa = PBXFileReference; lastKnownFileType = text; path = onboardingViewModel; sourceTree = "<group>"; };
+		7B3B3BE4264D5B3000B860CA /* onboarding */ = {isa = PBXFileReference; lastKnownFileType = text; path = onboarding; sourceTree = "<group>"; };
+		7B3B3BE5264D5B4F00B860CA /* onb */ = {isa = PBXFileReference; lastKnownFileType = text; path = onb; sourceTree = "<group>"; };
 		7BB6E6F3264D526F009EA067 /* CatCycle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatCycle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BB6E6F6264D526F009EA067 /* CatCycleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatCycleApp.swift; sourceTree = "<group>"; };
 		7BB6E6F8264D526F009EA067 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -78,6 +94,94 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7B3B3BC3264D592500B860CA /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				7B3B3BD5264D5A4800B860CA /* Onboarding */,
+				7B3B3BCB264D59D200B860CA /* Calendar */,
+				7B3B3BC4264D593600B860CA /* Home */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		7B3B3BC4264D593600B860CA /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				7BB6E726264D5323009EA067 /* View */,
+				7BB6E727264D532F009EA067 /* ViewModel */,
+				7BB6E728264D5340009EA067 /* Model */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		7B3B3BCB264D59D200B860CA /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				7B3B3BCE264D59FB00B860CA /* ViewModel */,
+				7B3B3BCD264D59E300B860CA /* View */,
+				7B3B3BCC264D59DC00B860CA /* Model */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
+		7B3B3BCC264D59DC00B860CA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7B3B3BD3264D5A3300B860CA /* calendarModel */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7B3B3BCD264D59E300B860CA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7B3B3BD1264D5A2600B860CA /* calendar */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7B3B3BCE264D59FB00B860CA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				7B3B3BCF264D5A1A00B860CA /* calendarViewModel */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		7B3B3BD5264D5A4800B860CA /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				7B3B3BD8264D5A6500B860CA /* ViewModel */,
+				7B3B3BD7264D5A5F00B860CA /* Model */,
+				7B3B3BD6264D5A5500B860CA /* View */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		7B3B3BD6264D5A5500B860CA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7B3B3BE4264D5B3000B860CA /* onboarding */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7B3B3BD7264D5A5F00B860CA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7B3B3BE5264D5B4F00B860CA /* onb */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7B3B3BD8264D5A6500B860CA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				7B3B3BE0264D5ACF00B860CA /* onboardingViewModel */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		7BB6E6EA264D526F009EA067 = {
 			isa = PBXGroup;
 			children = (
@@ -101,17 +205,14 @@
 		7BB6E6F5264D526F009EA067 /* CatCycle */ = {
 			isa = PBXGroup;
 			children = (
+				7B3B3BC3264D592500B860CA /* Scenes */,
 				7B3B3BC1264D576800B860CA /* .swiftlint.yml */,
-				7BB6E729264D534B009EA067 /* Shared */,
-				7BB6E728264D5340009EA067 /* Model */,
-				7BB6E727264D532F009EA067 /* ViewModel */,
-				7BB6E726264D5323009EA067 /* View */,
 				7BB6E6F6264D526F009EA067 /* CatCycleApp.swift */,
 				7BB6E6F8264D526F009EA067 /* ContentView.swift */,
-				7BB6E6FA264D5270009EA067 /* Assets.xcassets */,
 				7BB6E6FF264D5270009EA067 /* Persistence.swift */,
 				7BB6E704264D5270009EA067 /* Info.plist */,
 				7BB6E701264D5270009EA067 /* CatCycle.xcdatamodeld */,
+				7BB6E729264D534B009EA067 /* Shared */,
 				7BB6E6FC264D5270009EA067 /* Preview Content */,
 			);
 			path = CatCycle;
@@ -146,6 +247,7 @@
 		7BB6E726264D5323009EA067 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				7B3B3BC5264D598C00B860CA /* home */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -153,6 +255,7 @@
 		7BB6E727264D532F009EA067 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				7B3B3BC7264D59B600B860CA /* homeViewModel */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -160,6 +263,7 @@
 		7BB6E728264D5340009EA067 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				7B3B3BC9264D59C500B860CA /* homeModel */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -167,6 +271,7 @@
 		7BB6E729264D534B009EA067 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				7BB6E6FA264D5270009EA067 /* Assets.xcassets */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -276,8 +381,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B3B3BC2264D576800B860CA /* .swiftlint.yml in Resources */,
+				7B3B3BCA264D59C500B860CA /* homeModel in Resources */,
+				7B3B3BD2264D5A2600B860CA /* calendar in Resources */,
+				7B3B3BC6264D598C00B860CA /* home in Resources */,
+				7B3B3BD4264D5A3300B860CA /* calendarModel in Resources */,
 				7BB6E6FE264D5270009EA067 /* Preview Assets.xcassets in Resources */,
+				7B3B3BC8264D59B600B860CA /* homeViewModel in Resources */,
 				7BB6E6FB264D5270009EA067 /* Assets.xcassets in Resources */,
+				7B3B3BE1264D5ACF00B860CA /* onboardingViewModel in Resources */,
+				7B3B3BD0264D5A1A00B860CA /* calendarViewModel in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
