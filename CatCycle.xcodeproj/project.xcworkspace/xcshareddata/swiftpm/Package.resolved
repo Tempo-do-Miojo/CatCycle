@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Liquid",
+        "repositoryURL": "https://github.com/patysiq/liquid",
+        "state": {
+          "branch": "master",
+          "revision": "4548d38738f6acc4f88a50d5d1c7d6400f5fb9e8",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
