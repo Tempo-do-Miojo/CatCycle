@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03BC09902652A29C00DEC528 /* File in Resources */ = {isa = PBXBuildFile; fileRef = 03BC098F2652A29C00DEC528 /* File */; };
 		7B3B3BC2264D576800B860CA /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 7B3B3BC1264D576800B860CA /* .swiftlint.yml */; };
 		7B3B3BC6264D598C00B860CA /* home in Resources */ = {isa = PBXBuildFile; fileRef = 7B3B3BC5264D598C00B860CA /* home */; };
 		7B3B3BC8264D59B600B860CA /* homeViewModel in Resources */ = {isa = PBXBuildFile; fileRef = 7B3B3BC7264D59B600B860CA /* homeViewModel */; };
@@ -43,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		03BC098F2652A29C00DEC528 /* File */ = {isa = PBXFileReference; lastKnownFileType = text; path = File; sourceTree = "<group>"; };
 		7B3B3BC1264D576800B860CA /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		7B3B3BC5264D598C00B860CA /* home */ = {isa = PBXFileReference; lastKnownFileType = text; path = home; sourceTree = "<group>"; };
 		7B3B3BC7264D59B600B860CA /* homeViewModel */ = {isa = PBXFileReference; lastKnownFileType = text; path = homeViewModel; sourceTree = "<group>"; };
@@ -94,6 +96,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		03BC098D2652A24800DEC528 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				03BC098F2652A29C00DEC528 /* File */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		7B3B3BC3264D592500B860CA /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
@@ -271,6 +281,7 @@
 		7BB6E729264D534B009EA067 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				03BC098D2652A24800DEC528 /* Components */,
 				7BB6E6FA264D5270009EA067 /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -386,6 +397,7 @@
 				7B3B3BC6264D598C00B860CA /* home in Resources */,
 				7B3B3BD4264D5A3300B860CA /* calendarModel in Resources */,
 				7BB6E6FE264D5270009EA067 /* Preview Assets.xcassets in Resources */,
+				03BC09902652A29C00DEC528 /* File in Resources */,
 				7B3B3BC8264D59B600B860CA /* homeViewModel in Resources */,
 				7BB6E6FB264D5270009EA067 /* Assets.xcassets in Resources */,
 				7B3B3BE1264D5ACF00B860CA /* onboardingViewModel in Resources */,
