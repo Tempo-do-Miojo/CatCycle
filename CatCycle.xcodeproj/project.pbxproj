@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		03BC09902652A29C00DEC528 /* File in Resources */ = {isa = PBXBuildFile; fileRef = 03BC098F2652A29C00DEC528 /* File */; };
 		7B3B3BC2264D576800B860CA /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 7B3B3BC1264D576800B860CA /* .swiftlint.yml */; };
-		7B3B3BC6264D598C00B860CA /* home in Resources */ = {isa = PBXBuildFile; fileRef = 7B3B3BC5264D598C00B860CA /* home */; };
-		7B3B3BC8264D59B600B860CA /* homeViewModel in Resources */ = {isa = PBXBuildFile; fileRef = 7B3B3BC7264D59B600B860CA /* homeViewModel */; };
 		7B3B3BCA264D59C500B860CA /* homeModel in Resources */ = {isa = PBXBuildFile; fileRef = 7B3B3BC9264D59C500B860CA /* homeModel */; };
 		7B3B3BD0264D5A1A00B860CA /* calendarViewModel in Resources */ = {isa = PBXBuildFile; fileRef = 7B3B3BCF264D5A1A00B860CA /* calendarViewModel */; };
 		7B3B3BD2264D5A2600B860CA /* calendar in Resources */ = {isa = PBXBuildFile; fileRef = 7B3B3BD1264D5A2600B860CA /* calendar */; };
@@ -30,6 +28,11 @@
 		7B8142332652A4E900D38999 /* CatCycleWatchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8142322652A4E900D38999 /* CatCycleWatchUITests.swift */; };
 		7B8142372652A4E900D38999 /* CatCycleWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 7B8142002652A4E700D38999 /* CatCycleWatch.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		7B81424A2652A56A00D38999 /* Model in Resources */ = {isa = PBXBuildFile; fileRef = 7B8142492652A56A00D38999 /* Model */; };
+		7B81424E2652AB3900D38999 /* ColorSetCycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B81424D2652AB3900D38999 /* ColorSetCycle.swift */; };
+		7B8142502652AC4500D38999 /* CycleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B81424F2652AC4500D38999 /* CycleView.swift */; };
+		7B8142522652AE1800D38999 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8142512652AE1800D38999 /* HomeView.swift */; };
+		7B8142542652B08100D38999 /* PeriodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8142532652B08100D38999 /* PeriodView.swift */; };
+		7B8142562652B18700D38999 /* PeriodViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8142552652B18700D38999 /* PeriodViewModel.swift */; };
 		7BB6E6F7264D526F009EA067 /* CatCycleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB6E6F6264D526F009EA067 /* CatCycleApp.swift */; };
 		7BB6E6F9264D526F009EA067 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB6E6F8264D526F009EA067 /* ContentView.swift */; };
 		7BB6E6FB264D5270009EA067 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BB6E6FA264D5270009EA067 /* Assets.xcassets */; };
@@ -113,8 +116,6 @@
 /* Begin PBXFileReference section */
 		03BC098F2652A29C00DEC528 /* File */ = {isa = PBXFileReference; lastKnownFileType = text; path = File; sourceTree = "<group>"; };
 		7B3B3BC1264D576800B860CA /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
-		7B3B3BC5264D598C00B860CA /* home */ = {isa = PBXFileReference; lastKnownFileType = text; path = home; sourceTree = "<group>"; };
-		7B3B3BC7264D59B600B860CA /* homeViewModel */ = {isa = PBXFileReference; lastKnownFileType = text; path = homeViewModel; sourceTree = "<group>"; };
 		7B3B3BC9264D59C500B860CA /* homeModel */ = {isa = PBXFileReference; lastKnownFileType = text; path = homeModel; sourceTree = "<group>"; };
 		7B3B3BCF264D5A1A00B860CA /* calendarViewModel */ = {isa = PBXFileReference; lastKnownFileType = text; path = calendarViewModel; sourceTree = "<group>"; };
 		7B3B3BD1264D5A2600B860CA /* calendar */ = {isa = PBXFileReference; lastKnownFileType = text; path = calendar; sourceTree = "<group>"; };
@@ -142,6 +143,11 @@
 		7B8142322652A4E900D38999 /* CatCycleWatchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatCycleWatchUITests.swift; sourceTree = "<group>"; };
 		7B8142342652A4E900D38999 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7B8142492652A56A00D38999 /* Model */ = {isa = PBXFileReference; lastKnownFileType = text; path = Model; sourceTree = "<group>"; };
+		7B81424D2652AB3900D38999 /* ColorSetCycle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSetCycle.swift; sourceTree = "<group>"; };
+		7B81424F2652AC4500D38999 /* CycleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CycleView.swift; sourceTree = "<group>"; };
+		7B8142512652AE1800D38999 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		7B8142532652B08100D38999 /* PeriodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodView.swift; sourceTree = "<group>"; };
+		7B8142552652B18700D38999 /* PeriodViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodViewModel.swift; sourceTree = "<group>"; };
 		7BB6E6F3264D526F009EA067 /* CatCycle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatCycle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BB6E6F6264D526F009EA067 /* CatCycleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatCycleApp.swift; sourceTree = "<group>"; };
 		7BB6E6F8264D526F009EA067 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -434,7 +440,9 @@
 		7BB6E726264D5323009EA067 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				7B3B3BC5264D598C00B860CA /* home */,
+				7B81424F2652AC4500D38999 /* CycleView.swift */,
+				7B8142512652AE1800D38999 /* HomeView.swift */,
+				7B8142532652B08100D38999 /* PeriodView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -442,7 +450,8 @@
 		7BB6E727264D532F009EA067 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				7B3B3BC7264D59B600B860CA /* homeViewModel */,
+				7B81424D2652AB3900D38999 /* ColorSetCycle.swift */,
+				7B8142552652B18700D38999 /* PeriodViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -699,12 +708,10 @@
 				7B3B3BC2264D576800B860CA /* .swiftlint.yml in Resources */,
 				7B3B3BCA264D59C500B860CA /* homeModel in Resources */,
 				7B3B3BD2264D5A2600B860CA /* calendar in Resources */,
-				7B3B3BC6264D598C00B860CA /* home in Resources */,
 				7B3B3BD4264D5A3300B860CA /* calendarModel in Resources */,
 				7BB6E6FE264D5270009EA067 /* Preview Assets.xcassets in Resources */,
 				7B81424A2652A56A00D38999 /* Model in Resources */,
 				03BC09902652A29C00DEC528 /* File in Resources */,
-				7B3B3BC8264D59B600B860CA /* homeViewModel in Resources */,
 				7BB6E6FB264D5270009EA067 /* Assets.xcassets in Resources */,
 				7B3B3BE1264D5ACF00B860CA /* onboardingViewModel in Resources */,
 				7B3B3BD0264D5A1A00B860CA /* calendarViewModel in Resources */,
@@ -781,8 +788,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				7BB6E700264D5270009EA067 /* Persistence.swift in Sources */,
+				7B8142542652B08100D38999 /* PeriodView.swift in Sources */,
+				7B8142522652AE1800D38999 /* HomeView.swift in Sources */,
+				7B8142562652B18700D38999 /* PeriodViewModel.swift in Sources */,
 				7BB6E703264D5270009EA067 /* CatCycle.xcdatamodeld in Sources */,
 				7BB6E6F9264D526F009EA067 /* ContentView.swift in Sources */,
+				7B8142502652AC4500D38999 /* CycleView.swift in Sources */,
+				7B81424E2652AB3900D38999 /* ColorSetCycle.swift in Sources */,
 				7BB6E6F7264D526F009EA067 /* CatCycleApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
