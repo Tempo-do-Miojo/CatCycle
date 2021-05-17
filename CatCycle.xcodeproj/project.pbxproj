@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -22,6 +22,20 @@
 		7B3B3BD2264D5A2600B860CA /* calendar in Resources */ = {isa = PBXBuildFile; fileRef = 7B3B3BD1264D5A2600B860CA /* calendar */; };
 		7B3B3BD4264D5A3300B860CA /* calendarModel in Resources */ = {isa = PBXBuildFile; fileRef = 7B3B3BD3264D5A3300B860CA /* calendarModel */; };
 		7B3B3BE1264D5ACF00B860CA /* onboardingViewModel in Resources */ = {isa = PBXBuildFile; fileRef = 7B3B3BE0264D5ACF00B860CA /* onboardingViewModel */; };
+		7B8141FD2652A44600D38999 /* Liquid in Frameworks */ = {isa = PBXBuildFile; productRef = 7B8141FC2652A44600D38999 /* Liquid */; };
+		7B8142032652A4E800D38999 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B8142022652A4E800D38999 /* Assets.xcassets */; };
+		7B81420A2652A4E800D38999 /* CatCycleWatch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 7B8142092652A4E800D38999 /* CatCycleWatch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		7B81420F2652A4E800D38999 /* CatCycleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B81420E2652A4E800D38999 /* CatCycleApp.swift */; };
+		7B8142112652A4E800D38999 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8142102652A4E800D38999 /* ContentView.swift */; };
+		7B8142132652A4E800D38999 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8142122652A4E800D38999 /* NotificationController.swift */; };
+		7B8142152652A4E800D38999 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8142142652A4E800D38999 /* NotificationView.swift */; };
+		7B8142172652A4E800D38999 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8142162652A4E800D38999 /* ComplicationController.swift */; };
+		7B8142192652A4E800D38999 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B8142182652A4E800D38999 /* Assets.xcassets */; };
+		7B81421C2652A4E800D38999 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B81421B2652A4E800D38999 /* Preview Assets.xcassets */; };
+		7B8142282652A4E900D38999 /* CatCycleWatchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8142272652A4E900D38999 /* CatCycleWatchTests.swift */; };
+		7B8142332652A4E900D38999 /* CatCycleWatchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8142322652A4E900D38999 /* CatCycleWatchUITests.swift */; };
+		7B8142372652A4E900D38999 /* CatCycleWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 7B8142002652A4E700D38999 /* CatCycleWatch.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		7B81424A2652A56A00D38999 /* Model in Resources */ = {isa = PBXBuildFile; fileRef = 7B8142492652A56A00D38999 /* Model */; };
 		7BB6E6F7264D526F009EA067 /* CatCycleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB6E6F6264D526F009EA067 /* CatCycleApp.swift */; };
 		7BB6E6F9264D526F009EA067 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB6E6F8264D526F009EA067 /* ContentView.swift */; };
 		7BB6E6FB264D5270009EA067 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BB6E6FA264D5270009EA067 /* Assets.xcassets */; };
@@ -33,6 +47,34 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		7B81420B2652A4E800D38999 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7BB6E6EB264D526F009EA067 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B8142082652A4E800D38999;
+			remoteInfo = "CatCycleWatch Extension";
+		};
+		7B8142242652A4E900D38999 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7BB6E6EB264D526F009EA067 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B8142082652A4E800D38999;
+			remoteInfo = "CatCycleWatch Extension";
+		};
+		7B81422F2652A4E900D38999 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7BB6E6EB264D526F009EA067 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B8141FF2652A4E700D38999;
+			remoteInfo = CatCycleWatch;
+		};
+		7B8142352652A4E900D38999 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7BB6E6EB264D526F009EA067 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B8141FF2652A4E700D38999;
+			remoteInfo = CatCycleWatch;
+		};
 		7BB6E70A264D5271009EA067 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 7BB6E6EB264D526F009EA067 /* Project object */;
@@ -48,6 +90,31 @@
 			remoteInfo = CatCycle;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		7B81423B2652A4E900D38999 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				7B81420A2652A4E800D38999 /* CatCycleWatch Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B81423F2652A4E900D38999 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				7B8142372652A4E900D38999 /* CatCycleWatch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		03BC09972652A60300DEC528 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
@@ -67,6 +134,26 @@
 		7B3B3BE0264D5ACF00B860CA /* onboardingViewModel */ = {isa = PBXFileReference; lastKnownFileType = text; path = onboardingViewModel; sourceTree = "<group>"; };
 		7B3B3BE4264D5B3000B860CA /* onboarding */ = {isa = PBXFileReference; lastKnownFileType = text; path = onboarding; sourceTree = "<group>"; };
 		7B3B3BE5264D5B4F00B860CA /* onb */ = {isa = PBXFileReference; lastKnownFileType = text; path = onb; sourceTree = "<group>"; };
+		7B8142002652A4E700D38999 /* CatCycleWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatCycleWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B8142022652A4E800D38999 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7B8142042652A4E800D38999 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7B8142092652A4E800D38999 /* CatCycleWatch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "CatCycleWatch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B81420E2652A4E800D38999 /* CatCycleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatCycleApp.swift; sourceTree = "<group>"; };
+		7B8142102652A4E800D38999 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		7B8142122652A4E800D38999 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		7B8142142652A4E800D38999 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		7B8142162652A4E800D38999 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		7B8142182652A4E800D38999 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7B81421B2652A4E800D38999 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7B81421D2652A4E800D38999 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7B81421E2652A4E900D38999 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		7B8142232652A4E900D38999 /* CatCycleWatchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CatCycleWatchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B8142272652A4E900D38999 /* CatCycleWatchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatCycleWatchTests.swift; sourceTree = "<group>"; };
+		7B8142292652A4E900D38999 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7B81422E2652A4E900D38999 /* CatCycleWatchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CatCycleWatchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B8142322652A4E900D38999 /* CatCycleWatchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatCycleWatchUITests.swift; sourceTree = "<group>"; };
+		7B8142342652A4E900D38999 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7B8142492652A56A00D38999 /* Model */ = {isa = PBXFileReference; lastKnownFileType = text; path = Model; sourceTree = "<group>"; };
 		7BB6E6F3264D526F009EA067 /* CatCycle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatCycle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BB6E6F6264D526F009EA067 /* CatCycleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatCycleApp.swift; sourceTree = "<group>"; };
 		7BB6E6F8264D526F009EA067 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -84,10 +171,32 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		7B8142062652A4E800D38999 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B8142202652A4E900D38999 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B81422B2652A4E900D38999 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7BB6E6F0264D526F009EA067 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B8141FD2652A44600D38999 /* Liquid in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,12 +334,76 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		7B8142012652A4E700D38999 /* CatCycleWatch */ = {
+			isa = PBXGroup;
+			children = (
+				7B8142022652A4E800D38999 /* Assets.xcassets */,
+				7B8142042652A4E800D38999 /* Info.plist */,
+			);
+			path = CatCycleWatch;
+			sourceTree = "<group>";
+		};
+		7B81420D2652A4E800D38999 /* CatCycleWatch Extension */ = {
+			isa = PBXGroup;
+			children = (
+				7B81420E2652A4E800D38999 /* CatCycleApp.swift */,
+				7B8142102652A4E800D38999 /* ContentView.swift */,
+				7B8142122652A4E800D38999 /* NotificationController.swift */,
+				7B8142142652A4E800D38999 /* NotificationView.swift */,
+				7B8142162652A4E800D38999 /* ComplicationController.swift */,
+				7B8142182652A4E800D38999 /* Assets.xcassets */,
+				7B81421D2652A4E800D38999 /* Info.plist */,
+				7B81421E2652A4E900D38999 /* PushNotificationPayload.apns */,
+				7B81421A2652A4E800D38999 /* Preview Content */,
+			);
+			path = "CatCycleWatch Extension";
+			sourceTree = "<group>";
+		};
+		7B81421A2652A4E800D38999 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				7B81421B2652A4E800D38999 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		7B8142262652A4E900D38999 /* CatCycleWatchTests */ = {
+			isa = PBXGroup;
+			children = (
+				7B8142272652A4E900D38999 /* CatCycleWatchTests.swift */,
+				7B8142292652A4E900D38999 /* Info.plist */,
+			);
+			path = CatCycleWatchTests;
+			sourceTree = "<group>";
+		};
+		7B8142312652A4E900D38999 /* CatCycleWatchUITests */ = {
+			isa = PBXGroup;
+			children = (
+				7B8142322652A4E900D38999 /* CatCycleWatchUITests.swift */,
+				7B8142342652A4E900D38999 /* Info.plist */,
+			);
+			path = CatCycleWatchUITests;
+			sourceTree = "<group>";
+		};
+		7B8142482652A54E00D38999 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				7B8142492652A56A00D38999 /* Model */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
 		7BB6E6EA264D526F009EA067 = {
 			isa = PBXGroup;
 			children = (
+				7B8142482652A54E00D38999 /* Shared */,
 				7BB6E6F5264D526F009EA067 /* CatCycle */,
 				7BB6E70C264D5271009EA067 /* CatCycleTests */,
 				7BB6E717264D5271009EA067 /* CatCycleUITests */,
+				7B8142012652A4E700D38999 /* CatCycleWatch */,
+				7B81420D2652A4E800D38999 /* CatCycleWatch Extension */,
+				7B8142262652A4E900D38999 /* CatCycleWatchTests */,
+				7B8142312652A4E900D38999 /* CatCycleWatchUITests */,
 				7BB6E6F4264D526F009EA067 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -241,6 +414,10 @@
 				7BB6E6F3264D526F009EA067 /* CatCycle.app */,
 				7BB6E709264D5271009EA067 /* CatCycleTests.xctest */,
 				7BB6E714264D5271009EA067 /* CatCycleUITests.xctest */,
+				7B8142002652A4E700D38999 /* CatCycleWatch.app */,
+				7B8142092652A4E800D38999 /* CatCycleWatch Extension.appex */,
+				7B8142232652A4E900D38999 /* CatCycleWatchTests.xctest */,
+				7B81422E2652A4E900D38999 /* CatCycleWatchUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -324,6 +501,77 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		7B8141FF2652A4E700D38999 /* CatCycleWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7B81423C2652A4E900D38999 /* Build configuration list for PBXNativeTarget "CatCycleWatch" */;
+			buildPhases = (
+				7B8141FE2652A4E700D38999 /* Resources */,
+				7B81423B2652A4E900D38999 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7B81420C2652A4E800D38999 /* PBXTargetDependency */,
+			);
+			name = CatCycleWatch;
+			productName = CatCycleWatch;
+			productReference = 7B8142002652A4E700D38999 /* CatCycleWatch.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		7B8142082652A4E800D38999 /* CatCycleWatch Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7B8142382652A4E900D38999 /* Build configuration list for PBXNativeTarget "CatCycleWatch Extension" */;
+			buildPhases = (
+				7B8142052652A4E800D38999 /* Sources */,
+				7B8142062652A4E800D38999 /* Frameworks */,
+				7B8142072652A4E800D38999 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7B8142472652A4FB00D38999 /* PBXTargetDependency */,
+			);
+			name = "CatCycleWatch Extension";
+			productName = "CatCycleWatch Extension";
+			productReference = 7B8142092652A4E800D38999 /* CatCycleWatch Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+		7B8142222652A4E900D38999 /* CatCycleWatchTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7B8142402652A4E900D38999 /* Build configuration list for PBXNativeTarget "CatCycleWatchTests" */;
+			buildPhases = (
+				7B81421F2652A4E900D38999 /* Sources */,
+				7B8142202652A4E900D38999 /* Frameworks */,
+				7B8142212652A4E900D38999 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7B8142252652A4E900D38999 /* PBXTargetDependency */,
+			);
+			name = CatCycleWatchTests;
+			productName = CatCycleWatchTests;
+			productReference = 7B8142232652A4E900D38999 /* CatCycleWatchTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		7B81422D2652A4E900D38999 /* CatCycleWatchUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7B8142432652A4E900D38999 /* Build configuration list for PBXNativeTarget "CatCycleWatchUITests" */;
+			buildPhases = (
+				7B81422A2652A4E900D38999 /* Sources */,
+				7B81422B2652A4E900D38999 /* Frameworks */,
+				7B81422C2652A4E900D38999 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7B8142302652A4E900D38999 /* PBXTargetDependency */,
+			);
+			name = CatCycleWatchUITests;
+			productName = CatCycleWatchUITests;
+			productReference = 7B81422E2652A4E900D38999 /* CatCycleWatchUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		7BB6E6F2264D526F009EA067 /* CatCycle */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7BB6E71D264D5271009EA067 /* Build configuration list for PBXNativeTarget "CatCycle" */;
@@ -332,12 +580,17 @@
 				7BB6E6F0264D526F009EA067 /* Frameworks */,
 				7BB6E6F1264D526F009EA067 /* Resources */,
 				7BB6E72A264D53E0009EA067 /* ShellScript */,
+				7B81423F2652A4E900D38999 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				7B8142362652A4E900D38999 /* PBXTargetDependency */,
 			);
 			name = CatCycle;
+			packageProductDependencies = (
+				7B8141FC2652A44600D38999 /* Liquid */,
+			);
 			productName = CatCycle;
 			productReference = 7BB6E6F3264D526F009EA067 /* CatCycle.app */;
 			productType = "com.apple.product-type.application";
@@ -387,6 +640,20 @@
 				LastSwiftUpdateCheck = 1250;
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
+					7B8141FF2652A4E700D38999 = {
+						CreatedOnToolsVersion = 12.5;
+					};
+					7B8142082652A4E800D38999 = {
+						CreatedOnToolsVersion = 12.5;
+					};
+					7B8142222652A4E900D38999 = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = 7B8142082652A4E800D38999;
+					};
+					7B81422D2652A4E900D38999 = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = 7B8141FF2652A4E700D38999;
+					};
 					7BB6E6F2264D526F009EA067 = {
 						CreatedOnToolsVersion = 12.5;
 					};
@@ -409,6 +676,9 @@
 				Base,
 			);
 			mainGroup = 7BB6E6EA264D526F009EA067;
+			packageReferences = (
+				7B8141FB2652A44600D38999 /* XCRemoteSwiftPackageReference "liquid" */,
+			);
 			productRefGroup = 7BB6E6F4264D526F009EA067 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -416,11 +686,46 @@
 				7BB6E6F2264D526F009EA067 /* CatCycle */,
 				7BB6E708264D5271009EA067 /* CatCycleTests */,
 				7BB6E713264D5271009EA067 /* CatCycleUITests */,
+				7B8141FF2652A4E700D38999 /* CatCycleWatch */,
+				7B8142082652A4E800D38999 /* CatCycleWatch Extension */,
+				7B8142222652A4E900D38999 /* CatCycleWatchTests */,
+				7B81422D2652A4E900D38999 /* CatCycleWatchUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		7B8141FE2652A4E700D38999 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B8142032652A4E800D38999 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B8142072652A4E800D38999 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B81421C2652A4E800D38999 /* Preview Assets.xcassets in Resources */,
+				7B8142192652A4E800D38999 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B8142212652A4E900D38999 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B81422C2652A4E900D38999 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7BB6E6F1264D526F009EA067 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -433,6 +738,10 @@
 				7B3B3BD4264D5A3300B860CA /* calendarModel in Resources */,
 				03BC09A12652AB1900DEC528 /* OpenSans-SemiBold.ttf in Resources */,
 				7BB6E6FE264D5270009EA067 /* Preview Assets.xcassets in Resources */,
+
+				7B81424A2652A56A00D38999 /* Model in Resources */,
+				03BC09902652A29C00DEC528 /* File in Resources */,
+
 				7B3B3BC8264D59B600B860CA /* homeViewModel in Resources */,
 				7BB6E6FB264D5270009EA067 /* Assets.xcassets in Resources */,
 				7B3B3BE1264D5ACF00B860CA /* onboardingViewModel in Resources */,
@@ -480,6 +789,34 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		7B8142052652A4E800D38999 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B8142132652A4E800D38999 /* NotificationController.swift in Sources */,
+				7B8142112652A4E800D38999 /* ContentView.swift in Sources */,
+				7B8142172652A4E800D38999 /* ComplicationController.swift in Sources */,
+				7B81420F2652A4E800D38999 /* CatCycleApp.swift in Sources */,
+				7B8142152652A4E800D38999 /* NotificationView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B81421F2652A4E900D38999 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B8142282652A4E900D38999 /* CatCycleWatchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B81422A2652A4E900D38999 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B8142332652A4E900D38999 /* CatCycleWatchUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7BB6E6EF264D526F009EA067 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -512,6 +849,30 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		7B81420C2652A4E800D38999 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7B8142082652A4E800D38999 /* CatCycleWatch Extension */;
+			targetProxy = 7B81420B2652A4E800D38999 /* PBXContainerItemProxy */;
+		};
+		7B8142252652A4E900D38999 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7B8142082652A4E800D38999 /* CatCycleWatch Extension */;
+			targetProxy = 7B8142242652A4E900D38999 /* PBXContainerItemProxy */;
+		};
+		7B8142302652A4E900D38999 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7B8141FF2652A4E700D38999 /* CatCycleWatch */;
+			targetProxy = 7B81422F2652A4E900D38999 /* PBXContainerItemProxy */;
+		};
+		7B8142362652A4E900D38999 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7B8141FF2652A4E700D38999 /* CatCycleWatch */;
+			targetProxy = 7B8142352652A4E900D38999 /* PBXContainerItemProxy */;
+		};
+		7B8142472652A4FB00D38999 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 7B8142462652A4FB00D38999 /* Liquid */;
+		};
 		7BB6E70B264D5271009EA067 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 7BB6E6F2264D526F009EA067 /* CatCycle */;
@@ -525,6 +886,182 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		7B8142392652A4E900D38999 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"CatCycleWatch Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = 937MK3AF6X;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "CatCycleWatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.patriciasampaiosiqueira.CatCycle.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Debug;
+		};
+		7B81423A2652A4E900D38999 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"CatCycleWatch Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = 937MK3AF6X;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "CatCycleWatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.patriciasampaiosiqueira.CatCycle.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Release;
+		};
+		7B81423D2652A4E900D38999 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 937MK3AF6X;
+				IBSC_MODULE = CatCycleWatch_Extension;
+				INFOPLIST_FILE = CatCycleWatch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.patriciasampaiosiqueira.CatCycle.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Debug;
+		};
+		7B81423E2652A4E900D38999 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 937MK3AF6X;
+				IBSC_MODULE = CatCycleWatch_Extension;
+				INFOPLIST_FILE = CatCycleWatch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.patriciasampaiosiqueira.CatCycle.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Release;
+		};
+		7B8142412652A4E900D38999 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 937MK3AF6X;
+				INFOPLIST_FILE = CatCycleWatchTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.patriciasampaiosiqueira.CatCycle.CatCycleWatchTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CatCycleWatch Extension.appex/CatCycleWatch Extension";
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Debug;
+		};
+		7B8142422652A4E900D38999 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 937MK3AF6X;
+				INFOPLIST_FILE = CatCycleWatchTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.patriciasampaiosiqueira.CatCycle.CatCycleWatchTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CatCycleWatch Extension.appex/CatCycleWatch Extension";
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Release;
+		};
+		7B8142442652A4E900D38999 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 937MK3AF6X;
+				INFOPLIST_FILE = CatCycleWatchUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.patriciasampaiosiqueira.CatCycle.CatCycleWatchUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = CatCycleWatch;
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Debug;
+		};
+		7B8142452652A4E900D38999 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 937MK3AF6X;
+				INFOPLIST_FILE = CatCycleWatchUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.patriciasampaiosiqueira.CatCycle.CatCycleWatchUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = CatCycleWatch;
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Release;
+		};
 		7BB6E71B264D5271009EA067 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -772,6 +1309,42 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		7B8142382652A4E900D38999 /* Build configuration list for PBXNativeTarget "CatCycleWatch Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7B8142392652A4E900D38999 /* Debug */,
+				7B81423A2652A4E900D38999 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7B81423C2652A4E900D38999 /* Build configuration list for PBXNativeTarget "CatCycleWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7B81423D2652A4E900D38999 /* Debug */,
+				7B81423E2652A4E900D38999 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7B8142402652A4E900D38999 /* Build configuration list for PBXNativeTarget "CatCycleWatchTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7B8142412652A4E900D38999 /* Debug */,
+				7B8142422652A4E900D38999 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7B8142432652A4E900D38999 /* Build configuration list for PBXNativeTarget "CatCycleWatchUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7B8142442652A4E900D38999 /* Debug */,
+				7B8142452652A4E900D38999 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		7BB6E6EE264D526F009EA067 /* Build configuration list for PBXProject "CatCycle" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -809,6 +1382,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7B8141FB2652A44600D38999 /* XCRemoteSwiftPackageReference "liquid" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/patysiq/liquid";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7B8141FC2652A44600D38999 /* Liquid */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7B8141FB2652A44600D38999 /* XCRemoteSwiftPackageReference "liquid" */;
+			productName = Liquid;
+		};
+		7B8142462652A4FB00D38999 /* Liquid */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7B8141FB2652A44600D38999 /* XCRemoteSwiftPackageReference "liquid" */;
+			productName = Liquid;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		7BB6E701264D5270009EA067 /* CatCycle.xcdatamodeld */ = {
