@@ -15,6 +15,8 @@
 		03BC09A12652AB1900DEC528 /* OpenSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 03BC09A02652AB1900DEC528 /* OpenSans-SemiBold.ttf */; };
 		03BC09A32652ABA400DEC528 /* clarab.otf in Resources */ = {isa = PBXBuildFile; fileRef = 03BC09A22652ABA400DEC528 /* clarab.otf */; };
 		03BC09A72652BCB000DEC528 /* File in Resources */ = {isa = PBXBuildFile; fileRef = 03BC09A62652BCB000DEC528 /* File */; };
+		7B2DA29B2654017700FC47F9 /* DayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2DA29A2654017700FC47F9 /* DayView.swift */; };
+		7B2DA29D265401BA00FC47F9 /* DayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2DA29C265401BA00FC47F9 /* DayViewModel.swift */; };
 		7B3559632653E059007BE1ED /* ColorCycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8142602653DEDD00D38999 /* ColorCycle.swift */; };
 		7B3559642653E05C007BE1ED /* ColorCycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8142602653DEDD00D38999 /* ColorCycle.swift */; };
 		7B3B3BC2264D576800B860CA /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 7B3B3BC1264D576800B860CA /* .swiftlint.yml */; };
@@ -132,6 +134,8 @@
 		03BC09A02652AB1900DEC528 /* OpenSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiBold.ttf"; sourceTree = "<group>"; };
 		03BC09A22652ABA400DEC528 /* clarab.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = clarab.otf; sourceTree = "<group>"; };
 		03BC09A62652BCB000DEC528 /* File */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = File; sourceTree = "<group>"; };
+		7B2DA29A2654017700FC47F9 /* DayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayView.swift; sourceTree = "<group>"; };
+		7B2DA29C265401BA00FC47F9 /* DayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayViewModel.swift; sourceTree = "<group>"; };
 		7B3B3BC1264D576800B860CA /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		7B3B3BC9264D59C500B860CA /* homeModel */ = {isa = PBXFileReference; lastKnownFileType = text; path = homeModel; sourceTree = "<group>"; };
 		7B3B3BCF264D5A1A00B860CA /* calendarViewModel */ = {isa = PBXFileReference; lastKnownFileType = text; path = calendarViewModel; sourceTree = "<group>"; };
@@ -501,6 +505,7 @@
 				7B8142512652AE1800D38999 /* HomeView.swift */,
 				7B8142532652B08100D38999 /* PeriodView.swift */,
 				816F1994265407D400071F40 /* EmptyStateView.swift */,
+				7B2DA29A2654017700FC47F9 /* DayView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -509,6 +514,7 @@
 			isa = PBXGroup;
 			children = (
 				7B8142552652B18700D38999 /* PeriodViewModel.swift */,
+				7B2DA29C265401BA00FC47F9 /* DayViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -855,6 +861,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				03BC099A2652A84F00DEC528 /* Fonts.swift in Sources */,
+				7B2DA29B2654017700FC47F9 /* DayView.swift in Sources */,
+				7B2DA29D265401BA00FC47F9 /* DayViewModel.swift in Sources */,
 				7BB6E700264D5270009EA067 /* Persistence.swift in Sources */,
 				7B8142542652B08100D38999 /* PeriodView.swift in Sources */,
 				7B8142522652AE1800D38999 /* HomeView.swift in Sources */,
