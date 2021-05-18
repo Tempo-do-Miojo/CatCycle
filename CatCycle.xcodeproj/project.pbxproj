@@ -24,6 +24,8 @@
 		7BB6E703264D5270009EA067 /* CatCycle.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7BB6E701264D5270009EA067 /* CatCycle.xcdatamodeld */; };
 		7BB6E70E264D5271009EA067 /* CatCycleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB6E70D264D5271009EA067 /* CatCycleTests.swift */; };
 		7BB6E719264D5271009EA067 /* CatCycleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB6E718264D5271009EA067 /* CatCycleUITests.swift */; };
+		8813E7DA2653E438000BEF16 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8813E7D92653E438000BEF16 /* CalendarView.swift */; };
+		8813E7DD2653FCF7000BEF16 /* CalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8813E7DC2653FCF7000BEF16 /* CalendarViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +71,8 @@
 		7BB6E714264D5271009EA067 /* CatCycleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CatCycleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BB6E718264D5271009EA067 /* CatCycleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatCycleUITests.swift; sourceTree = "<group>"; };
 		7BB6E71A264D5271009EA067 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8813E7D92653E438000BEF16 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		8813E7DC2653FCF7000BEF16 /* CalendarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,7 @@
 		03BC098D2652A24800DEC528 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				8813E7DB2653FB27000BEF16 /* Calendar */,
 				03BC098F2652A29C00DEC528 /* File */,
 			);
 			path = Components;
@@ -287,6 +292,15 @@
 			path = Shared;
 			sourceTree = "<group>";
 		};
+		8813E7DB2653FB27000BEF16 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				8813E7D92653E438000BEF16 /* CalendarView.swift */,
+				8813E7DC2653FCF7000BEF16 /* CalendarViewModel.swift */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -446,6 +460,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8813E7DD2653FCF7000BEF16 /* CalendarViewModel.swift in Sources */,
+				8813E7DA2653E438000BEF16 /* CalendarView.swift in Sources */,
 				7BB6E700264D5270009EA067 /* Persistence.swift in Sources */,
 				7BB6E703264D5270009EA067 /* CatCycle.xcdatamodeld in Sources */,
 				7BB6E6F9264D526F009EA067 /* ContentView.swift in Sources */,
