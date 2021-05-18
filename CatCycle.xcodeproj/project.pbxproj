@@ -7,10 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		03BC09902652A29C00DEC528 /* File in Resources */ = {isa = PBXBuildFile; fileRef = 03BC098F2652A29C00DEC528 /* File */; };
-		7B3559632653E059007BE1ED /* ColorCycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8142602653DEDD00D38999 /* ColorCycle.swift */; };
-		7B3559642653E05C007BE1ED /* ColorCycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8142602653DEDD00D38999 /* ColorCycle.swift */; };
-
+		03BC09902652A29C00DEC528 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		03BC09982652A60300DEC528 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BC09972652A60300DEC528 /* Color.swift */; };
 		03BC099A2652A84F00DEC528 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BC09992652A84F00DEC528 /* Fonts.swift */; };
 		03BC099D2652AB0B00DEC528 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 03BC099C2652AB0B00DEC528 /* OpenSans-Bold.ttf */; };
@@ -18,6 +15,8 @@
 		03BC09A12652AB1900DEC528 /* OpenSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 03BC09A02652AB1900DEC528 /* OpenSans-SemiBold.ttf */; };
 		03BC09A32652ABA400DEC528 /* clarab.otf in Resources */ = {isa = PBXBuildFile; fileRef = 03BC09A22652ABA400DEC528 /* clarab.otf */; };
 		03BC09A72652BCB000DEC528 /* File in Resources */ = {isa = PBXBuildFile; fileRef = 03BC09A62652BCB000DEC528 /* File */; };
+		7B3559632653E059007BE1ED /* ColorCycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8142602653DEDD00D38999 /* ColorCycle.swift */; };
+		7B3559642653E05C007BE1ED /* ColorCycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8142602653DEDD00D38999 /* ColorCycle.swift */; };
 		7B3B3BC2264D576800B860CA /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 7B3B3BC1264D576800B860CA /* .swiftlint.yml */; };
 		7B3B3BCA264D59C500B860CA /* homeModel in Resources */ = {isa = PBXBuildFile; fileRef = 7B3B3BC9264D59C500B860CA /* homeModel */; };
 		7B3B3BD0264D5A1A00B860CA /* calendarViewModel in Resources */ = {isa = PBXBuildFile; fileRef = 7B3B3BCF264D5A1A00B860CA /* calendarViewModel */; };
@@ -356,7 +355,6 @@
 		7B81420D2652A4E800D38999 /* CatCycleWatch Extension */ = {
 			isa = PBXGroup;
 			children = (
-				7B8142572653DDE200D38999 /* Cycle */,
 				7B81420E2652A4E800D38999 /* CatCycleApp.swift */,
 				7B8142102652A4E800D38999 /* ContentView.swift */,
 				7B8142122652A4E800D38999 /* NotificationController.swift */,
@@ -402,13 +400,6 @@
 				7B81425D2653DEAD00D38999 /* Cycle */,
 			);
 			path = Shared;
-			sourceTree = "<group>";
-		};
-		7B8142572653DDE200D38999 /* Cycle */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Cycle;
 			sourceTree = "<group>";
 		};
 		7B81425A2653DE3C00D38999 /* Frameworks */ = {
@@ -776,11 +767,7 @@
 				7B3B3BD4264D5A3300B860CA /* calendarModel in Resources */,
 				03BC09A12652AB1900DEC528 /* OpenSans-SemiBold.ttf in Resources */,
 				7BB6E6FE264D5270009EA067 /* Preview Assets.xcassets in Resources */,
-
-				7B81424A2652A56A00D38999 /* Model in Resources */,
-				03BC09902652A29C00DEC528 /* File in Resources */,
-
-				7B3B3BC8264D59B600B860CA /* homeViewModel in Resources */,
+				03BC09902652A29C00DEC528 /* (null) in Resources */,
 				7BB6E6FB264D5270009EA067 /* Assets.xcassets in Resources */,
 				7B3B3BE1264D5ACF00B860CA /* onboardingViewModel in Resources */,
 				03BC099F2652AB1200DEC528 /* OpenSans-Regular.ttf in Resources */,
