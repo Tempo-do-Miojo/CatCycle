@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		034FAC872653E0880096F8CF /* SegmentControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034FAC862653E0880096F8CF /* SegmentControl.swift */; };
 		03BC09982652A60300DEC528 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BC09972652A60300DEC528 /* Color.swift */; };
 		03BC099A2652A84F00DEC528 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BC09992652A84F00DEC528 /* Fonts.swift */; };
 		03BC099D2652AB0B00DEC528 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 03BC099C2652AB0B00DEC528 /* OpenSans-Bold.ttf */; };
 		03BC099F2652AB1200DEC528 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 03BC099E2652AB1200DEC528 /* OpenSans-Regular.ttf */; };
 		03BC09A12652AB1900DEC528 /* OpenSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 03BC09A02652AB1900DEC528 /* OpenSans-SemiBold.ttf */; };
 		03BC09A32652ABA400DEC528 /* clarab.otf in Resources */ = {isa = PBXBuildFile; fileRef = 03BC09A22652ABA400DEC528 /* clarab.otf */; };
-		03BC09A72652BCB000DEC528 /* File in Resources */ = {isa = PBXBuildFile; fileRef = 03BC09A62652BCB000DEC528 /* File */; };
 		7B3B3BC2264D576800B860CA /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 7B3B3BC1264D576800B860CA /* .swiftlint.yml */; };
 		7B3B3BC6264D598C00B860CA /* home in Resources */ = {isa = PBXBuildFile; fileRef = 7B3B3BC5264D598C00B860CA /* home */; };
 		7B3B3BC8264D59B600B860CA /* homeViewModel in Resources */ = {isa = PBXBuildFile; fileRef = 7B3B3BC7264D59B600B860CA /* homeViewModel */; };
@@ -117,13 +117,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		034FAC862653E0880096F8CF /* SegmentControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentControl.swift; sourceTree = "<group>"; };
 		03BC09972652A60300DEC528 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		03BC09992652A84F00DEC528 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		03BC099C2652AB0B00DEC528 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
 		03BC099E2652AB1200DEC528 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		03BC09A02652AB1900DEC528 /* OpenSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiBold.ttf"; sourceTree = "<group>"; };
 		03BC09A22652ABA400DEC528 /* clarab.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = clarab.otf; sourceTree = "<group>"; };
-		03BC09A62652BCB000DEC528 /* File */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = File; sourceTree = "<group>"; };
 		7B3B3BC1264D576800B860CA /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		7B3B3BC5264D598C00B860CA /* home */ = {isa = PBXFileReference; lastKnownFileType = text; path = home; sourceTree = "<group>"; };
 		7B3B3BC7264D59B600B860CA /* homeViewModel */ = {isa = PBXFileReference; lastKnownFileType = text; path = homeViewModel; sourceTree = "<group>"; };
@@ -220,7 +220,7 @@
 		03BC098D2652A24800DEC528 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				03BC09A62652BCB000DEC528 /* File */,
+				034FAC862653E0880096F8CF /* SegmentControl.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -738,17 +738,13 @@
 				7B3B3BD4264D5A3300B860CA /* calendarModel in Resources */,
 				03BC09A12652AB1900DEC528 /* OpenSans-SemiBold.ttf in Resources */,
 				7BB6E6FE264D5270009EA067 /* Preview Assets.xcassets in Resources */,
-
 				7B81424A2652A56A00D38999 /* Model in Resources */,
-				03BC09902652A29C00DEC528 /* File in Resources */,
-
 				7B3B3BC8264D59B600B860CA /* homeViewModel in Resources */,
 				7BB6E6FB264D5270009EA067 /* Assets.xcassets in Resources */,
 				7B3B3BE1264D5ACF00B860CA /* onboardingViewModel in Resources */,
 				03BC099F2652AB1200DEC528 /* OpenSans-Regular.ttf in Resources */,
 				03BC09A32652ABA400DEC528 /* clarab.otf in Resources */,
 				7B3B3BD0264D5A1A00B860CA /* calendarViewModel in Resources */,
-				03BC09A72652BCB000DEC528 /* File in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -826,6 +822,7 @@
 				7BB6E703264D5270009EA067 /* CatCycle.xcdatamodeld in Sources */,
 				7BB6E6F9264D526F009EA067 /* ContentView.swift in Sources */,
 				7BB6E6F7264D526F009EA067 /* CatCycleApp.swift in Sources */,
+				034FAC872653E0880096F8CF /* SegmentControl.swift in Sources */,
 				03BC09982652A60300DEC528 /* Color.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
