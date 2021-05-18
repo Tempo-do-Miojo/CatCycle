@@ -1,8 +1,8 @@
 //
 //  CycleView.swift
-//  CatCycle
+//  CatCycleWatch Extension
 //
-//  Created by PATRICIA S SIQUEIRA on 17/05/21.
+//  Created by PATRICIA S SIQUEIRA on 18/05/21.
 //
 
 import SwiftUI
