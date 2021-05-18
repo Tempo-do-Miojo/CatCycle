@@ -50,6 +50,8 @@
 		7BB6E703264D5270009EA067 /* CatCycle.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7BB6E701264D5270009EA067 /* CatCycle.xcdatamodeld */; };
 		7BB6E70E264D5271009EA067 /* CatCycleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB6E70D264D5271009EA067 /* CatCycleTests.swift */; };
 		7BB6E719264D5271009EA067 /* CatCycleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB6E718264D5271009EA067 /* CatCycleUITests.swift */; };
+		816F1995265407D400071F40 /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816F1994265407D400071F40 /* EmptyStateView.swift */; };
+		816F1997265407FB00071F40 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816F1996265407FB00071F40 /* Image.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -176,6 +178,8 @@
 		7BB6E714264D5271009EA067 /* CatCycleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CatCycleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BB6E718264D5271009EA067 /* CatCycleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatCycleUITests.swift; sourceTree = "<group>"; };
 		7BB6E71A264D5271009EA067 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		816F1994265407D400071F40 /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
+		816F1996265407FB00071F40 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -240,6 +244,7 @@
 				03BC099B2652A9D900DEC528 /* FontsFiles */,
 				03BC09972652A60300DEC528 /* Color.swift */,
 				03BC09992652A84F00DEC528 /* Fonts.swift */,
+				816F1996265407FB00071F40 /* Image.swift */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -495,6 +500,7 @@
 			children = (
 				7B8142512652AE1800D38999 /* HomeView.swift */,
 				7B8142532652B08100D38999 /* PeriodView.swift */,
+				816F1994265407D400071F40 /* EmptyStateView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -854,6 +860,8 @@
 				7B8142522652AE1800D38999 /* HomeView.swift in Sources */,
 				7B8142622653DF2200D38999 /* CycleView.swift in Sources */,
 				7B3559642653E05C007BE1ED /* ColorCycle.swift in Sources */,
+				816F1997265407FB00071F40 /* Image.swift in Sources */,
+				816F1995265407D400071F40 /* EmptyStateView.swift in Sources */,
 				7B8142562652B18700D38999 /* PeriodViewModel.swift in Sources */,
 				7BB6E703264D5270009EA067 /* CatCycle.xcdatamodeld in Sources */,
 				7BB6E6F9264D526F009EA067 /* ContentView.swift in Sources */,
