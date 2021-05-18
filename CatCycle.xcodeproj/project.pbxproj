@@ -44,6 +44,8 @@
 		7BB6E703264D5270009EA067 /* CatCycle.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7BB6E701264D5270009EA067 /* CatCycle.xcdatamodeld */; };
 		7BB6E70E264D5271009EA067 /* CatCycleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB6E70D264D5271009EA067 /* CatCycleTests.swift */; };
 		7BB6E719264D5271009EA067 /* CatCycleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB6E718264D5271009EA067 /* CatCycleUITests.swift */; };
+		816F19912653FE1500071F40 /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816F19902653FE1500071F40 /* EmptyStateView.swift */; };
+		816F19932654046000071F40 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816F19922654046000071F40 /* Images.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -168,6 +170,8 @@
 		7BB6E714264D5271009EA067 /* CatCycleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CatCycleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BB6E718264D5271009EA067 /* CatCycleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatCycleUITests.swift; sourceTree = "<group>"; };
 		7BB6E71A264D5271009EA067 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		816F19902653FE1500071F40 /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
+		816F19922654046000071F40 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -231,6 +235,7 @@
 				03BC099B2652A9D900DEC528 /* FontsFiles */,
 				03BC09972652A60300DEC528 /* Color.swift */,
 				03BC09992652A84F00DEC528 /* Fonts.swift */,
+				816F19922654046000071F40 /* Images.swift */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -468,6 +473,7 @@
 			isa = PBXGroup;
 			children = (
 				7B3B3BC5264D598C00B860CA /* home */,
+				816F19902653FE1500071F40 /* EmptyStateView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -738,10 +744,7 @@
 				7B3B3BD4264D5A3300B860CA /* calendarModel in Resources */,
 				03BC09A12652AB1900DEC528 /* OpenSans-SemiBold.ttf in Resources */,
 				7BB6E6FE264D5270009EA067 /* Preview Assets.xcassets in Resources */,
-
 				7B81424A2652A56A00D38999 /* Model in Resources */,
-				03BC09902652A29C00DEC528 /* File in Resources */,
-
 				7B3B3BC8264D59B600B860CA /* homeViewModel in Resources */,
 				7BB6E6FB264D5270009EA067 /* Assets.xcassets in Resources */,
 				7B3B3BE1264D5ACF00B860CA /* onboardingViewModel in Resources */,
@@ -826,7 +829,9 @@
 				7BB6E703264D5270009EA067 /* CatCycle.xcdatamodeld in Sources */,
 				7BB6E6F9264D526F009EA067 /* ContentView.swift in Sources */,
 				7BB6E6F7264D526F009EA067 /* CatCycleApp.swift in Sources */,
+				816F19932654046000071F40 /* Images.swift in Sources */,
 				03BC09982652A60300DEC528 /* Color.swift in Sources */,
+				816F19912653FE1500071F40 /* EmptyStateView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
