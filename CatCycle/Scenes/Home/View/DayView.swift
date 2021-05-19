@@ -10,7 +10,7 @@ struct DayNow: View {
     var dayNow: Date = Date()
     var dates = DayViewModel()
 
-    var body: some View{
+    var body: some View {
         Circle()
             .frame(width: 20, height: 20)
             .foregroundColor(Color.ccPrimaryPurple)
@@ -22,5 +22,4 @@ struct DayNow: View {
             .offset(y: -160)
             .rotationEffect(.degrees(dates.getAngle(date: dayNow)))
     }
-    
 }
