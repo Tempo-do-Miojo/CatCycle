@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		03092293265486CD00B8F34F /* InfoRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03092292265486CD00B8F34F /* InfoRow.swift */; };
+		0309229726548F9F00B8F34F /* Information.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0309229626548F9F00B8F34F /* Information.swift */; };
+		0309229C2655387100B8F34F /* InfoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0309229B2655387100B8F34F /* InfoData.swift */; };
+		030922A2265539D500B8F34F /* InformationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030922A1265539D500B8F34F /* InformationViewModel.swift */; };
 		034FAC872653E0880096F8CF /* SegmentControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034FAC862653E0880096F8CF /* SegmentControl.swift */; };
 		03BC09902652A29C00DEC528 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		03BC09982652A60300DEC528 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BC09972652A60300DEC528 /* Color.swift */; };
@@ -129,6 +132,9 @@
 
 /* Begin PBXFileReference section */
 		03092292265486CD00B8F34F /* InfoRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoRow.swift; sourceTree = "<group>"; };
+		0309229626548F9F00B8F34F /* Information.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Information.swift; sourceTree = "<group>"; };
+		0309229B2655387100B8F34F /* InfoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoData.swift; sourceTree = "<group>"; };
+		030922A1265539D500B8F34F /* InformationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationViewModel.swift; sourceTree = "<group>"; };
 		034FAC862653E0880096F8CF /* SegmentControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentControl.swift; sourceTree = "<group>"; };
 		03BC09972652A60300DEC528 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		03BC09992652A84F00DEC528 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
@@ -236,11 +242,62 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		030922982655384D00B8F34F /* InfoRow */ = {
+			isa = PBXGroup;
+			children = (
+				0309229A2655386000B8F34F /* Model */,
+				030922992655385900B8F34F /* View */,
+			);
+			path = InfoRow;
+			sourceTree = "<group>";
+		};
+		030922992655385900B8F34F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				03092292265486CD00B8F34F /* InfoRow.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0309229A2655386000B8F34F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0309229B2655387100B8F34F /* InfoData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0309229E265539AB00B8F34F /* Information */ = {
+			isa = PBXGroup;
+			children = (
+				030922A0265539BF00B8F34F /* ViewModel */,
+				0309229F265539B900B8F34F /* View */,
+			);
+			path = Information;
+			sourceTree = "<group>";
+		};
+		0309229F265539B900B8F34F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0309229626548F9F00B8F34F /* Information.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		030922A0265539BF00B8F34F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				030922A1265539D500B8F34F /* InformationViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		03BC098D2652A24800DEC528 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				0309229E265539AB00B8F34F /* Information */,
 				034FAC862653E0880096F8CF /* SegmentControl.swift */,
-				03092292265486CD00B8F34F /* InfoRow.swift */,
+				030922982655384D00B8F34F /* InfoRow */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -862,11 +919,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0309229726548F9F00B8F34F /* Information.swift in Sources */,
 				03BC099A2652A84F00DEC528 /* Fonts.swift in Sources */,
 				7B2DA29B2654017700FC47F9 /* DayView.swift in Sources */,
+				030922A2265539D500B8F34F /* InformationViewModel.swift in Sources */,
 				7B2DA29D265401BA00FC47F9 /* DayViewModel.swift in Sources */,
 				03092293265486CD00B8F34F /* InfoRow.swift in Sources */,
 				7BB6E700264D5270009EA067 /* Persistence.swift in Sources */,
+				0309229C2655387100B8F34F /* InfoData.swift in Sources */,
 				7B8142542652B08100D38999 /* PeriodView.swift in Sources */,
 				7B8142522652AE1800D38999 /* HomeView.swift in Sources */,
 				7B8142622653DF2200D38999 /* CycleView.swift in Sources */,
