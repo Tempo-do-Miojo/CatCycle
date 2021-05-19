@@ -8,8 +8,11 @@
 import Foundation
 
 class InformationViewModel {
-    let info: [InfoData] = [.init(id: 0, iconName: "Bleeding_Medium", text: "Medium", type: .bleeding),
-                            .init(id: 1, iconName: "Symptoms_Cramps", text: "Cramps", type: .symptoms)]
+    let info: [InfoData]
+
+    init(info: [InfoData]) {
+        self.info = info
+    }
 
     func infoFilter(type: DataTrackingType) -> [InfoData] {
         return info.filter {$0.type == type}

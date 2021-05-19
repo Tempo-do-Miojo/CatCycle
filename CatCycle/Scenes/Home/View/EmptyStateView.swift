@@ -20,7 +20,7 @@ struct EmptyStateView: View {
         trailing: 0)
 
     var body: some View {
-        VStack {
+        VStack(spacing: 0) {
             Image(Image.emptyStateImage)
             Text("No data around here")
                 .font(.ccTitle2)

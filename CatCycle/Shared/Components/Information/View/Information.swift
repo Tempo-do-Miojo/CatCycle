@@ -8,13 +8,23 @@
 import SwiftUI
 
 struct Information: View {
-    let viewModel = InformationViewModel()
+    let viewModel: InformationViewModel
 
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
-            SegmentControl(titles: ["Day 20"])
-                .lineSpacing(100)
-                .padding(.bottom, 8)
+            HStack {
+                SegmentControl(titles: ["Day 20"])
+                    .lineSpacing(100)
+                    .padding(.bottom, 8)
+                Spacer()
+            }
+
+            if viewModel.info.isEmpty {
+                Rectangle()
+                    .foregroundColor(.clear)
+                    .background(EmptyStateView().padding(.bottom, 24))
+
+            }
 
             if !viewModel.infoFilter(type: .bleeding).isEmpty {
                 sectionContent(.bleeding)
@@ -46,8 +56,12 @@ struct Information: View {
 
 struct Information_Previews: PreviewProvider {
     static var previews: some View {
-        Information()
+        Information(viewModel: .init(info:
+                        [.init(id: 0, iconName: "Bleeding_Medium", text: "Medium", type: .bleeding),
+                         .init(id: 1, iconName: "Symptoms_Cramps", text: "Cramps", type: .symptoms)]))
             .previewLayout(.sizeThatFits)
 
+        Information(viewModel: .init(info: []))
+            .previewLayout(.sizeThatFits)
     }
 }
