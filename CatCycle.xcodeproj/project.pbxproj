@@ -11,6 +11,19 @@
 		0309229726548F9F00B8F34F /* Information.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0309229626548F9F00B8F34F /* Information.swift */; };
 		0309229C2655387100B8F34F /* InfoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0309229B2655387100B8F34F /* InfoData.swift */; };
 		030922A2265539D500B8F34F /* InformationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030922A1265539D500B8F34F /* InformationViewModel.swift */; };
+		030922B12655742200B8F34F /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BC09992652A84F00DEC528 /* Fonts.swift */; };
+		030922B22655742200B8F34F /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816F1996265407FB00071F40 /* Image.swift */; };
+		030922B32655742200B8F34F /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BC09972652A60300DEC528 /* Color.swift */; };
+		030922B42655742600B8F34F /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 03BC099C2652AB0B00DEC528 /* OpenSans-Bold.ttf */; };
+		030922B52655742600B8F34F /* OpenSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 03BC09A02652AB1900DEC528 /* OpenSans-SemiBold.ttf */; };
+		030922B62655742600B8F34F /* clarab.otf in Resources */ = {isa = PBXBuildFile; fileRef = 03BC09A22652ABA400DEC528 /* clarab.otf */; };
+		030922B72655742600B8F34F /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 03BC099E2652AB1200DEC528 /* OpenSans-Regular.ttf */; };
+		030922B82655742C00B8F34F /* SegmentControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034FAC862653E0880096F8CF /* SegmentControl.swift */; };
+		030922B92655743200B8F34F /* InfoRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03092292265486CD00B8F34F /* InfoRow.swift */; };
+		030922BA2655743400B8F34F /* InfoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0309229B2655387100B8F34F /* InfoData.swift */; };
+		030922BB2655743F00B8F34F /* InformationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030922A1265539D500B8F34F /* InformationViewModel.swift */; };
+		030922BC2655744200B8F34F /* Information.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0309229626548F9F00B8F34F /* Information.swift */; };
+		030922BD2655759200B8F34F /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816F1994265407D400071F40 /* EmptyStateView.swift */; };
 		034FAC872653E0880096F8CF /* SegmentControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034FAC862653E0880096F8CF /* SegmentControl.swift */; };
 		03BC09902652A29C00DEC528 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		03BC09982652A60300DEC528 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BC09972652A60300DEC528 /* Color.swift */; };
@@ -281,6 +294,7 @@
 		0309229F265539B900B8F34F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				816F1994265407D400071F40 /* EmptyStateView.swift */,
 				0309229626548F9F00B8F34F /* Information.swift */,
 			);
 			path = View;
@@ -294,13 +308,21 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		030922B02655738200B8F34F /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				030922982655384D00B8F34F /* InfoRow */,
+				034FAC862653E0880096F8CF /* SegmentControl.swift */,
+				7B81425D2653DEAD00D38999 /* Cycle */,
+				0309229E265539AB00B8F34F /* Information */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		03BC098D2652A24800DEC528 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				0309229E265539AB00B8F34F /* Information */,
-				034FAC862653E0880096F8CF /* SegmentControl.swift */,
 				81897E862655358500DCE0C1 /* AddButton.swift */,
-				030922982655384D00B8F34F /* InfoRow */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -469,7 +491,8 @@
 		7B8142482652A54E00D38999 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				7B81425D2653DEAD00D38999 /* Cycle */,
+				03BC09962652A58D00DEC528 /* Assets */,
+				030922B02655738200B8F34F /* Components */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -567,7 +590,6 @@
 			children = (
 				7B8142512652AE1800D38999 /* HomeView.swift */,
 				7B8142532652B08100D38999 /* PeriodView.swift */,
-				816F1994265407D400071F40 /* EmptyStateView.swift */,
 				7B2DA29A2654017700FC47F9 /* DayView.swift */,
 			);
 			path = View;
@@ -593,7 +615,6 @@
 		7BB6E729264D534B009EA067 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				03BC09962652A58D00DEC528 /* Assets */,
 				03BC098D2652A24800DEC528 /* Components */,
 				7BB6E6FA264D5270009EA067 /* Assets.xcassets */,
 			);
@@ -812,8 +833,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				030922B52655742600B8F34F /* OpenSans-SemiBold.ttf in Resources */,
 				7B81421C2652A4E800D38999 /* Preview Assets.xcassets in Resources */,
 				7B8142192652A4E800D38999 /* Assets.xcassets in Resources */,
+				030922B42655742600B8F34F /* OpenSans-Bold.ttf in Resources */,
+				030922B72655742600B8F34F /* OpenSans-Regular.ttf in Resources */,
+				030922B62655742600B8F34F /* clarab.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -892,13 +917,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				030922B12655742200B8F34F /* Fonts.swift in Sources */,
+				030922B22655742200B8F34F /* Image.swift in Sources */,
 				7B8142132652A4E800D38999 /* NotificationController.swift in Sources */,
+				030922BC2655744200B8F34F /* Information.swift in Sources */,
+				030922B32655742200B8F34F /* Color.swift in Sources */,
 				7B8142112652A4E800D38999 /* ContentView.swift in Sources */,
 				7B3559632653E059007BE1ED /* ColorCycle.swift in Sources */,
+				030922B82655742C00B8F34F /* SegmentControl.swift in Sources */,
 				7B8142172652A4E800D38999 /* ComplicationController.swift in Sources */,
+				030922BA2655743400B8F34F /* InfoData.swift in Sources */,
+				030922BD2655759200B8F34F /* EmptyStateView.swift in Sources */,
+				030922B92655743200B8F34F /* InfoRow.swift in Sources */,
 				7B81420F2652A4E800D38999 /* CatCycleApp.swift in Sources */,
 				7B81425F2653DEC100D38999 /* CycleView.swift in Sources */,
 				7B8142152652A4E800D38999 /* NotificationView.swift in Sources */,
+				030922BB2655743F00B8F34F /* InformationViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

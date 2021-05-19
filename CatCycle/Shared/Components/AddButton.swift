@@ -8,9 +8,9 @@
 import SwiftUI
 
 enum CCButtonType: String {
-    case add = "Plus"
-    case forward = "Forward"
-    case save = "Check"
+    case addBtn = "Plus"
+    case forwardBtn = "Forward"
+    case saveBtn = "Check"
 }
 
 struct CCButton: View {
@@ -20,7 +20,7 @@ struct CCButton: View {
     var body: some View {
         Button(action: action) {
             switch type {
-            case .save:
+            case .saveBtn:
                 HStack(spacing: 24) {
                     Text("Save").font(.ccParagraph1)
                     Image(type.rawValue)
@@ -52,21 +52,21 @@ struct AddButton_Previews: PreviewProvider {
     static var previews: some View {
         CCButton(action: {
             print("oi")
-        }, type: .add)
+        }, type: .addBtn)
         .fixedSize()
         .cornerRadius(8)
         .previewLayout(PreviewLayout.sizeThatFits)
 
         CCButton(action: {
             print("oi")
-        }, type: .forward)
+        }, type: .forwardBtn)
         .fixedSize()
         .cornerRadius(8)
         .previewLayout(PreviewLayout.sizeThatFits)
 
         CCButton(action: {
             print("oi")
-        }, type: .save)
+        }, type: .saveBtn)
         .cornerRadius(8)
         .previewLayout(PreviewLayout.sizeThatFits)
     }
