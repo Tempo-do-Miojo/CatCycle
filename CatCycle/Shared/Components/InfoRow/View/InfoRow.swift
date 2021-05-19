@@ -7,25 +7,19 @@
 
 import SwiftUI
 
-enum DataTrackingType {
-    case bleeding, symptoms
-}
-
 struct InfoRow: View {
-    let iconName: String
-    let text: String
-    let type: DataTrackingType
+    let infoData: InfoData
 
     var body: some View {
         HStack(spacing: 12) {
             ZStack {
                 Rectangle()
                     .frame(width: 36, height: 36)
-                    .foregroundColor(type == .bleeding ? .ccRed : .ccSecudaryPurple)
+                    .foregroundColor(infoData.type == .bleeding ? .ccRed : .ccSecudaryPurple)
                     .cornerRadius(5)
-                Image(iconName)
+                Image(infoData.iconName)
             }
-            Text(text)
+            Text(infoData.text)
             Spacer()
         }
     }
@@ -33,9 +27,9 @@ struct InfoRow: View {
 
 struct InfoRow_Previews: PreviewProvider {
     static var previews: some View {
-        InfoRow(iconName: "Bleeding_Medium", text: "Medium", type: .bleeding)
+        InfoRow(infoData: .init(id: 0, iconName: "Bleeding_Medium", text: "Medium", type: .bleeding))
             .previewLayout(.sizeThatFits)
-        InfoRow(iconName: "Symptoms_Cramps", text: "Cramps", type: .symptoms)
+        InfoRow(infoData: .init(id: 1, iconName: "Symptoms_Cramps", text: "Cramps", type: .symptoms))
             .previewLayout(.sizeThatFits)
     }
 }
