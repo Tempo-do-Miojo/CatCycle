@@ -29,9 +29,14 @@ struct CircleView: View {
             Circle()
                 .frame(width: 180, height: 180)
                 .foregroundColor(colorSet.color4)
-            VStack {
-                Text("Day").font(.largeTitle).foregroundColor(colorSet.color5)
-                Text("\(getTextFromDate(date: dayNow))").font(.title).foregroundColor(colorSet.color5)
+
+            VStack(spacing: -4) {
+                Text("Day")
+                    .font(.ccWatchSubtitle)
+                    .foregroundColor(.ccGray3)
+                Text("20")
+                    .font(.ccWatchLargeTitle)
+                    .foregroundColor(.ccGray3)
             }
         }
     }

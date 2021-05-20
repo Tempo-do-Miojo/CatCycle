@@ -20,6 +20,7 @@ struct InfoRow: View {
                 Image(infoData.iconName)
             }
             Text(infoData.text)
+                .font(.ccParagraph3)
             Spacer()
         }
     }
