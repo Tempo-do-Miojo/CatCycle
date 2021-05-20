@@ -38,8 +38,6 @@
 		7B3559642653E05C007BE1ED /* ColorCycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8142602653DEDD00D38999 /* ColorCycle.swift */; };
 		7B3B3BC2264D576800B860CA /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 7B3B3BC1264D576800B860CA /* .swiftlint.yml */; };
 		7B3B3BCA264D59C500B860CA /* homeModel in Resources */ = {isa = PBXBuildFile; fileRef = 7B3B3BC9264D59C500B860CA /* homeModel */; };
-		7B3B3BD0264D5A1A00B860CA /* calendarViewModel in Resources */ = {isa = PBXBuildFile; fileRef = 7B3B3BCF264D5A1A00B860CA /* calendarViewModel */; };
-		7B3B3BD2264D5A2600B860CA /* calendar in Resources */ = {isa = PBXBuildFile; fileRef = 7B3B3BD1264D5A2600B860CA /* calendar */; };
 		7B3B3BD4264D5A3300B860CA /* calendarModel in Resources */ = {isa = PBXBuildFile; fileRef = 7B3B3BD3264D5A3300B860CA /* calendarModel */; };
 		7B3B3BE1264D5ACF00B860CA /* onboardingViewModel in Resources */ = {isa = PBXBuildFile; fileRef = 7B3B3BE0264D5ACF00B860CA /* onboardingViewModel */; };
 		7B8141FD2652A44600D38999 /* Liquid in Frameworks */ = {isa = PBXBuildFile; productRef = 7B8141FC2652A44600D38999 /* Liquid */; };
@@ -162,8 +160,6 @@
 		7B2DA29C265401BA00FC47F9 /* DayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayViewModel.swift; sourceTree = "<group>"; };
 		7B3B3BC1264D576800B860CA /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		7B3B3BC9264D59C500B860CA /* homeModel */ = {isa = PBXFileReference; lastKnownFileType = text; path = homeModel; sourceTree = "<group>"; };
-		7B3B3BCF264D5A1A00B860CA /* calendarViewModel */ = {isa = PBXFileReference; lastKnownFileType = text; path = calendarViewModel; sourceTree = "<group>"; };
-		7B3B3BD1264D5A2600B860CA /* calendar */ = {isa = PBXFileReference; lastKnownFileType = text; path = calendar; sourceTree = "<group>"; };
 		7B3B3BD3264D5A3300B860CA /* calendarModel */ = {isa = PBXFileReference; lastKnownFileType = text; path = calendarModel; sourceTree = "<group>"; };
 		7B3B3BE0264D5ACF00B860CA /* onboardingViewModel */ = {isa = PBXFileReference; lastKnownFileType = text; path = onboardingViewModel; sourceTree = "<group>"; };
 		7B3B3BE4264D5B3000B860CA /* onboarding */ = {isa = PBXFileReference; lastKnownFileType = text; path = onboarding; sourceTree = "<group>"; };
@@ -328,7 +324,6 @@
 			children = (
 				81897E862655358500DCE0C1 /* AddButton.swift */,
 				8813E7DB2653FB27000BEF16 /* Calendar */,
-				03BC098F2652A29C00DEC528 /* File */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -396,7 +391,7 @@
 		7B3B3BCD264D59E300B860CA /* View */ = {
 			isa = PBXGroup;
 			children = (
-				7B3B3BD1264D5A2600B860CA /* calendar */,
+				8813E7D92653E438000BEF16 /* CalendarView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -404,7 +399,7 @@
 		7B3B3BCE264D59FB00B860CA /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				7B3B3BCF264D5A1A00B860CA /* calendarViewModel */,
+				8813E7DC2653FCF7000BEF16 /* CalendarViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -630,8 +625,6 @@
 		8813E7DB2653FB27000BEF16 /* Calendar */ = {
 			isa = PBXGroup;
 			children = (
-				8813E7D92653E438000BEF16 /* CalendarView.swift */,
-				8813E7DC2653FCF7000BEF16 /* CalendarViewModel.swift */,
 			);
 			path = Calendar;
 			sourceTree = "<group>";
@@ -878,7 +871,6 @@
 				03BC099D2652AB0B00DEC528 /* OpenSans-Bold.ttf in Resources */,
 				7B3B3BC2264D576800B860CA /* .swiftlint.yml in Resources */,
 				7B3B3BCA264D59C500B860CA /* homeModel in Resources */,
-				7B3B3BD2264D5A2600B860CA /* calendar in Resources */,
 				7B3B3BD4264D5A3300B860CA /* calendarModel in Resources */,
 				03BC09A12652AB1900DEC528 /* OpenSans-SemiBold.ttf in Resources */,
 				7BB6E6FE264D5270009EA067 /* Preview Assets.xcassets in Resources */,
@@ -887,7 +879,6 @@
 				7B3B3BE1264D5ACF00B860CA /* onboardingViewModel in Resources */,
 				03BC099F2652AB1200DEC528 /* OpenSans-Regular.ttf in Resources */,
 				03BC09A32652ABA400DEC528 /* clarab.otf in Resources */,
-				7B3B3BD0264D5A1A00B860CA /* calendarViewModel in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -16,6 +16,7 @@ struct CatCycleApp: App {
 //            ContentView()
 //                .environment(\.managedObjectContext, persistenceController.container.viewContext)
             CalendarView()
+            //HomeView()
         }
     }
 }

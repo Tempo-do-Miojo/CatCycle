@@ -39,12 +39,17 @@ class Model: ObservableObject {
         dateFormatter.dateFormat = "d"
         return dateFormatter
     }()
+    lazy var dateYearFormatter: DateFormatter = {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy"
+        return dateFormatter
+    }()
     lazy var dateMonthFormatter: DateFormatter = {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MMMM"
         return dateFormatter
     }()
-    
+
     private let selectedDate: Date = .init()
 
     func getDate(month: Int) -> Date {
