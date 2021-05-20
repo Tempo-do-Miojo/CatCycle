@@ -24,7 +24,7 @@ struct MonthMetadata {
 
 class Model: ObservableObject {
     private let calendar = Calendar(identifier: .gregorian)
-    private lazy var dateComponents: DateComponents = {
+    lazy var dateComponents: DateComponents = {
         var date = DateComponents()
         date.month = 11
         date.day = 1
@@ -32,9 +32,16 @@ class Model: ObservableObject {
         return date
     }()
 
-    lazy var dateFormatter: DateFormatter = {
+    var week: [String] = ["Su","Mo", "Tu", "We", "Th", "Fr", "Sa"]
+
+    lazy var dateDayFormatter: DateFormatter = {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "d"
+        return dateFormatter
+    }()
+    lazy var dateMonthFormatter: DateFormatter = {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MMMM"
         return dateFormatter
     }()
     
@@ -57,7 +64,6 @@ class Model: ObservableObject {
         return MonthMetadata(numberOfDays: numberOfDaysInMonth, firstDay: firstDayOfMonth, firstDayWeekday: firstDayWeekday)
     }
 
-    // 1
     func generateDaysInMonth(for baseDate: Date = .init()) -> [Day] {
         guard let metadata = try? monthMetadata(for: baseDate) else {
             fatalError("An error occurred when generating the metadata for \(baseDate)")
@@ -65,10 +71,6 @@ class Model: ObservableObject {
         let numberOfDaysInMonth = metadata.numberOfDays
         let offsetInInitialRow = metadata.firstDayWeekday
         let firstDayOfMonth = metadata.firstDay
-//        let days: [Day] = []
-//        for day in 1..<numberOfDaysInMonth {
-//            days.append()
-//        }
         let days: [Day] = (1..<(numberOfDaysInMonth + offsetInInitialRow)).map { day in
             let isWithinDisplayedMonth = day >= offsetInInitialRow
             let dayOffset = isWithinDisplayedMonth ? day - offsetInInitialRow : -(offsetInInitialRow - day)
@@ -81,7 +83,7 @@ class Model: ObservableObject {
         let date = calendar.date(byAdding: .day, value: dayOffset, to: baseDate) ?? baseDate
         return Day(
             date: date,
-            number: dateFormatter.string(from: date),
+            number: dateDayFormatter.string(from: date),
             isSelected: calendar.isDate(date, inSameDayAs: selectedDate),
             isWithinDisplayedMonth: isWithinDisplayedMonth
         )
