@@ -36,7 +36,7 @@ struct HomeView: View {
                         PeriodView(period: PeriodViewModel(fromCycle: 0.1, toCycle: 0.15, angleCycle: 180), colorTracker: Color.ccBlue)
                         DayNow()
                     }
-                    Information(viewModel: .init(info: [.init(id: 0, iconName: "Bleeding_Medium", text: "Medium", type: .bleeding), .init(id: 1, iconName: "Symptoms_Cramps", text: "Cramps", type: .symptoms)]))
+//                    Information(titles: , infos: )
                         .padding(.horizontal,24)
                     Spacer()
                 }

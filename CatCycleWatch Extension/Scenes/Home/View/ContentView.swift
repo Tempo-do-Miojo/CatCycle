@@ -16,8 +16,7 @@ struct ContentView: View {
                 CircleView(colorSet: ColorSets(color1: Color.ccPrimaryPurple,
                                                color2: Color.ccPrimaryPurple,
                                                color3: Color.ccPrimaryPurple,
-                                               color4: Color.black,
-                                               color5: Color.ccGray3))
+                                               color4: Color.black))
                     .scaleEffect(scaleDevice, anchor: .center)
                     .frame(width: 150, height: 150, alignment: .center)
 
