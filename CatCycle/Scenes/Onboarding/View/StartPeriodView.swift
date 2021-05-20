@@ -13,15 +13,14 @@ struct StartPeriodView: View {
 
     var body: some View {
         VStack {
-            Text(data.title).font(.ccTitle2)
+            Text(data.title).font(.ccTitle5)
                 .padding(.top, 68)
             Text(data.subTitle).font(.ccParagraph3).foregroundColor(.ccGray2)
                 .padding(.top, 6)
             Spacer()
         }
         .multilineTextAlignment(.center)
-        .padding(.leading, 24)
-        .padding(.trailing, 24)
+        .padding(.horizontal, 24)
     }
 }
 

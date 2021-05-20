@@ -17,7 +17,7 @@ struct NameView: View {
             Image(data.imageNamed)
                 .padding(.top, 68)
             Text(data.title)
-                .font(.ccTitle2)
+                .font(.ccTitle5)
                 .padding(.top, 48)
             Text(data.subTitle)
                 .font(.ccParagraph3)
@@ -27,12 +27,10 @@ struct NameView: View {
             TextField("Your name...", text: $username)
                 .textFieldStyle(CCTextFieldStyle())
                 .padding(.top, 6)
-                .padding(.leading, 24)
-                .padding(.trailing, 24)
+                .padding(.horizontal, 8)
             Spacer()
         }
-        .padding(.leading, 24)
-        .padding(.trailing, 24)
+        .padding(.horizontal, 24)
     }
 }
 
