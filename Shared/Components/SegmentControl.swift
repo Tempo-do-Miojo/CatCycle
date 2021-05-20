@@ -38,10 +38,11 @@ struct SegmentControl: View {
 
                     if index == section.id {
                         indicatorView
-                            .matchedGeometryEffect(id: "indicator" , in: namespace)
+                            .matchedGeometryEffect(id: "indicator", in: namespace)
                     }
                 }
             }
+            Spacer()
         }
     }
 
@@ -70,5 +71,7 @@ struct SegmentControl_Previews: PreviewProvider {
     static var previews: some View {
         SegmentControl(titles: ["Day 20", "Day"])
             .previewLayout(.sizeThatFits)
+        SegmentControl(titles: ["Day 20", "Day"])
+            .previewDevice("Apple Watch Series 6 - 40mm")
     }
 }

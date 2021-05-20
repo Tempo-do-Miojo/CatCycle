@@ -39,12 +39,6 @@ struct CCButtonStyle: ButtonStyle {
             .background(Color.ccPrimaryPurple)
             .foregroundColor(.white)
             .imageScale(.large)
-            .onTapGesture(perform: simpleSuccess)
-    }
-
-    func simpleSuccess() {
-        let generator = UINotificationFeedbackGenerator()
-        generator.notificationOccurred(.success)
     }
 }
 
