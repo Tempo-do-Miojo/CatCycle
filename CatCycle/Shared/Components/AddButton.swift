@@ -39,7 +39,7 @@ struct CCButtonStyle: ButtonStyle {
             .background(Color.ccPrimaryPurple)
             .foregroundColor(.white)
             .imageScale(.large)
-            .onTapGesture(perform: simpleSuccess)
+//            .onTapGesture(perform: simpleSuccess)
     }
 
     func simpleSuccess() {
