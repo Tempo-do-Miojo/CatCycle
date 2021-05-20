@@ -9,11 +9,10 @@ import SwiftUI
 
 struct Information: View {
     let viewModel: InformationViewModel
-
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
             HStack {
-                SegmentControl(titles: ["Day 20"])
+                SegmentControl(titles: ["Day"])
                     .lineSpacing(100)
                     .padding(.bottom, 8)
                 Spacer()
@@ -36,7 +35,6 @@ struct Information: View {
             }
         }
     }
-
     func sectionContent(_ type: DataTrackingType) -> some View {
         return VStack(alignment: .leading, spacing: 16) {
             sectionTitle(type.rawValue)

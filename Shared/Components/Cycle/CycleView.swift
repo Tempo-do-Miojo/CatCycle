@@ -30,8 +30,8 @@ struct CircleView: View {
                 .frame(width: 180, height: 180)
                 .foregroundColor(colorSet.color4)
             VStack {
-                Text("Day").font(.largeTitle).foregroundColor(colorSet.color5)
-                Text("\(getTextFromDate(date: dayNow))").font(.title).foregroundColor(colorSet.color5)
+                Text("Day").font(.ccTitle1).foregroundColor(Color.ccGray1)
+                Text("\(getTextFromDate(date: dayNow))").font(.ccLargeTitle).foregroundColor(Color.ccGray1)
             }
         }
     }

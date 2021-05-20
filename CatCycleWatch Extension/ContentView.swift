@@ -11,7 +11,7 @@ struct ContentView: View {
     var scaleDevice: CGSize
     var body: some View {
             ZStack(alignment: .center) {
-                CircleView(colorSet: ColorSets(color1: Color.blue, color2: Color.blue, color3: Color.blue, color4: Color.white, color5: Color.black))
+                CircleView(colorSet: ColorSets(color1: Color.blue, color2: Color.blue, color3: Color.blue, color4: Color.white))
                         .scaleEffect(scaleDevice, anchor: .center)
 
                 }
