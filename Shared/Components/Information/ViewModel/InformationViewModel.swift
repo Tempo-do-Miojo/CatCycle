@@ -8,9 +8,11 @@
 import Foundation
 
 class InformationViewModel {
+    let titles: [String]
     let info: [InfoData]
 
-    init(info: [InfoData]) {
+    init(titles: [String], info: [InfoData]) {
+        self.titles = titles
         self.info = info
     }
 
