@@ -10,6 +10,7 @@ import SwiftUI
 struct LenghtPeriodView: View {
 
     let data: OnboardingData
+    @State var lenghtPeriod: Int = 27
 
     var body: some View {
         VStack {
@@ -17,6 +18,11 @@ struct LenghtPeriodView: View {
                 .padding(.top, 68)
             Text(data.subTitle).font(.ccParagraph3).foregroundColor(.ccGray2)
                 .padding(.top, 6)
+            Picker("", selection: $lenghtPeriod, content: {
+                ForEach(0..<30) { item in
+                    Text("\(item)")
+                }
+            })
             Spacer()
         }
         .multilineTextAlignment(.center)
