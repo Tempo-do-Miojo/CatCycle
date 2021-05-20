@@ -11,11 +11,9 @@ struct ContentView: View {
     var scaleDevice: CGSize
     var body: some View {
             ZStack(alignment: .center) {
-                    CircleView(colorSet: ColorSets(color1: Color.blue, color2: Color.blue, color3: Color.blue, color4: Color.white))
+                CircleView(colorSet: ColorSets(color1: Color.blue, color2: Color.blue, color3: Color.blue, color4: Color.white, color5: Color.black))
                         .scaleEffect(scaleDevice, anchor: .center)
-                    VStack {
-                        Text("Day").font(.largeTitle).foregroundColor(Color.black)
-                    }
+
                 }
             .navigationTitle("My period")
     }
