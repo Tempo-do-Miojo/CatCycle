@@ -13,7 +13,7 @@ struct CatCycleApp: App {
 
     var body: some Scene {
         WindowGroup {
-            HomeView()
+            OnboardingView()
 //            ContentView()
 //                .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }

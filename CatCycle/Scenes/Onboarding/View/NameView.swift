@@ -15,6 +15,7 @@ struct NameView: View {
     var body: some View {
         VStack {
             Image(data.imageNamed)
+                .padding(.top, 68)
             Text(data.title)
                 .font(.ccTitle2)
                 .padding(.top, 48)
@@ -24,11 +25,11 @@ struct NameView: View {
                 .foregroundColor(.ccGray2)
                 .multilineTextAlignment(.center)
             TextField("Your name...", text: $username)
-                .background(Color.ccGray3)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .textFieldStyle(CCTextFieldStyle())
                 .padding(.top, 6)
                 .padding(.leading, 24)
                 .padding(.trailing, 24)
+            Spacer()
         }
         .padding(.leading, 24)
         .padding(.trailing, 24)
