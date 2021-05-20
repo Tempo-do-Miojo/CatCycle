@@ -40,6 +40,8 @@ struct Information: View {
             if !viewModel.infoFilter(type: .bleeding).isEmpty {
                 sectionContent(.bleeding)
                 Divider()
+                    .padding(.horizontal, isWatchOS ? 8 : 24)
+                    .foregroundColor(.ccGray2.opacity(0.3))
             }
 
             if !viewModel.infoFilter(type: .symptoms).isEmpty {

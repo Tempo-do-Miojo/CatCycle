@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-fileprivate struct Section: Identifiable {
+private struct Section: Identifiable {
     let title: String
     let id: Int
 }
@@ -15,6 +15,7 @@ fileprivate struct Section: Identifiable {
 struct SegmentControl: View {
     private var sections = [Section]()
 
+    @Environment(\.colorScheme) var colorScheme
     @Namespace private var namespace
     @State private var index = 0
 
@@ -27,8 +28,8 @@ struct SegmentControl: View {
             ForEach(sections) { section in
                 VStack(alignment: .leading, spacing: 2) {
                 Text(section.title)
-                    .font(section.id == index ? .ccTitle4 : .ccTitle3 )
-                    .foregroundColor(section.id == index ? .ccGray1 : .ccGray2)
+                    .font(section.id == index ? fontCondition.selected : fontCondition.nonSelected )
+                    .foregroundColor(section.id == index ? colorCondition.selected : colorCondition.nonSelected)
                     .onTapGesture {
                         withAnimation {
                             index = section.id
@@ -51,6 +52,22 @@ struct SegmentControl: View {
             .foregroundColor(.ccPrimaryPurple)
             .cornerRadius(3)
             .frame(width: 35, height: 3)
+    }
+
+    var colorCondition: (selected: Color, nonSelected: Color) {
+        if colorScheme == .dark {
+            return (selected: .ccGray3, nonSelected: .ccGray2)
+        } else {
+            return (selected: .ccGray1, nonSelected: .ccGray2)
+        }
+    }
+
+    var fontCondition: (selected: Font, nonSelected: Font) {
+        #if os(watchOS)
+        return (selected: .ccParagraph1, nonSelected: .ccParagraph1)
+        #else
+        return (selected: .ccTitle4, nonSelected: .ccTitle3)
+        #endif
     }
 
     private func createSections(titles: [String]) -> [Section] {

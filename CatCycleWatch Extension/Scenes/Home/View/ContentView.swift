@@ -20,8 +20,6 @@ struct ContentView: View {
                     .scaleEffect(scaleDevice, anchor: .center)
                     .frame(width: 150, height: 150, alignment: .center)
 
-
-
             }
             VStack(alignment: .leading) {
                 Information(titles: ["Day 20"], infos: [
