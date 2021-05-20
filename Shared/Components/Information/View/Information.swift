@@ -47,7 +47,6 @@ struct Information: View {
             }
         }
     }
-
     func sectionContent(_ type: DataTrackingType) -> some View {
         return VStack(alignment: .leading, spacing: isWatchOS ? 8 : 16) {
             #if os(iOS)
