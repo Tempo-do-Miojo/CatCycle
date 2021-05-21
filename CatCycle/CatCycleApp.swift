@@ -13,9 +13,10 @@ struct CatCycleApp: App {
 
     var body: some Scene {
         WindowGroup {
-            HomeView()
 //            ContentView()
 //                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            CalendarView()
+            //HomeView()
         }
     }
 }
