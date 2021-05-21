@@ -135,3 +135,38 @@ struct CalendarView_Previews: PreviewProvider {
         CalendarView()
     }
 }
+
+struct CalendarBaseView: View {
+
+    @StateObject var model = Model()
+    @State var selectedDay: Day?
+
+    var body: some View {
+        VStack {
+            VStack(spacing: 40) {
+                HStack {
+                    HeaderCalendar()
+                    Spacer()
+                }.padding(.leading, 24)
+            }
+            HStack {
+                LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 0), count: 7), spacing: 0) {
+                    ForEach(model.week, id: \.self) { weekDay in
+                        Text(weekDay)
+                            .font(Font.ccParagraph2)
+                    }
+                }
+            }.padding(.horizontal, 10)
+            HStack {
+                LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 0), count: 7), spacing: 0) {
+                    ForEach(model.generateDaysInMonth(for: model.getDate(month: 01)), id: \.self) { day in
+                        DayView(day: day, isSelected: day == selectedDay)
+                            .onTapGesture {
+                                selectedDay = day
+                            }
+                    }
+                }
+            }.padding(.horizontal, 13)
+        }
+    }
+}
