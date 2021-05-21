@@ -85,6 +85,7 @@
 		81AD5FD726569AC9006930EF /* StartPeriodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AD5FD626569AC9006930EF /* StartPeriodView.swift */; };
 		81AD5FD926569AE2006930EF /* OnboardingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AD5FD826569AE2006930EF /* OnboardingData.swift */; };
 		81AD5FDB2656AD33006930EF /* CCTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AD5FDA2656AD33006930EF /* CCTextField.swift */; };
+		81AD5FDE2657E53B006930EF /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AD5FDD2657E53B006930EF /* AppRouter.swift */; };
 		8813E7DA2653E438000BEF16 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8813E7D92653E438000BEF16 /* CalendarView.swift */; };
 		8813E7DD2653FCF7000BEF16 /* CalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8813E7DC2653FCF7000BEF16 /* CalendarViewModel.swift */; };
 /* End PBXBuildFile section */
@@ -227,6 +228,7 @@
 		81AD5FD626569AC9006930EF /* StartPeriodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartPeriodView.swift; sourceTree = "<group>"; };
 		81AD5FD826569AE2006930EF /* OnboardingData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingData.swift; sourceTree = "<group>"; };
 		81AD5FDA2656AD33006930EF /* CCTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCTextField.swift; sourceTree = "<group>"; };
+		81AD5FDD2657E53B006930EF /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 		8813E7D92653E438000BEF16 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		8813E7DC2653FCF7000BEF16 /* CalendarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -676,10 +678,19 @@
 		7BB6E729264D534B009EA067 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				81AD5FDC2657E4F0006930EF /* Router */,
 				03BC098D2652A24800DEC528 /* Components */,
 				7BB6E6FA264D5270009EA067 /* Assets.xcassets */,
 			);
 			path = Shared;
+			sourceTree = "<group>";
+		};
+		81AD5FDC2657E4F0006930EF /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				81AD5FDD2657E53B006930EF /* AppRouter.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1034,6 +1045,7 @@
 				81897E8B265564AF00DCE0C1 /* PageViewController.swift in Sources */,
 				8813E7DD2653FCF7000BEF16 /* CalendarViewModel.swift in Sources */,
 				8813E7DA2653E438000BEF16 /* CalendarView.swift in Sources */,
+				81AD5FDE2657E53B006930EF /* AppRouter.swift in Sources */,
 				7BB6E700264D5270009EA067 /* Persistence.swift in Sources */,
 				0309229C2655387100B8F34F /* InfoData.swift in Sources */,
 				7B8142542652B08100D38999 /* PeriodView.swift in Sources */,
