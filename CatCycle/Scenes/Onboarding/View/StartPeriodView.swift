@@ -17,6 +17,8 @@ struct StartPeriodView: View {
                 .padding(.top, 68)
             Text(data.subTitle).font(.ccParagraph3).foregroundColor(.ccGray2)
                 .padding(.top, 6)
+            CalendarBaseView()
+                .padding(.top, 50)
             Spacer()
         }
         .multilineTextAlignment(.center)

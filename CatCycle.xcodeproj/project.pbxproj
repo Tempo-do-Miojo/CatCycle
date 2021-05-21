@@ -379,7 +379,6 @@
 			children = (
 				81897E862655358500DCE0C1 /* AddButton.swift */,
 				81AD5FDA2656AD33006930EF /* CCTextField.swift */,
-				8813E7DB2653FB27000BEF16 /* Calendar */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -681,13 +680,6 @@
 				7BB6E6FA264D5270009EA067 /* Assets.xcassets */,
 			);
 			path = Shared;
-			sourceTree = "<group>";
-		};
-		8813E7DB2653FB27000BEF16 /* Calendar */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Calendar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1032,7 +1024,6 @@
 			files = (
 				7BEFF2A92656AEF3001D6A56 /* FrameSets.swift in Sources */,
 				81AD5FD526569A96006930EF /* LengthPeriodView.swift in Sources */,
-
 				0309229726548F9F00B8F34F /* Information.swift in Sources */,
 				03BC099A2652A84F00DEC528 /* Fonts.swift in Sources */,
 				7B2DA29B2654017700FC47F9 /* DayNow.swift in Sources */,
