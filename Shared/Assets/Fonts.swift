@@ -10,7 +10,7 @@ import SwiftUI
 extension Font {
     // App
     static let ccLargeTitle = Font.custom("Clara-Bold", size: 44)
-    static let ccTitle1 = Font.custom("OpenSans-SemiBold", size: 40)
+    static let ccTitle1 = Font.custom("OpenSans-Bold", size: 40)
     static let ccTitle2 = Font.custom("Clara-Bold", size: 22)
     static let ccTitle3 = Font.custom("OpenSans-Regular", size: 20)
     static let ccTitle4 = Font.custom("OpenSans-SemiBold", size: 23)
