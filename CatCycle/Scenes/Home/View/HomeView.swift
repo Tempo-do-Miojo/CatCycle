@@ -31,7 +31,7 @@ struct HomeView: View {
                     }
                     .padding(.top, 25)
                     ZStack {
-                        CircleView(colorSet: ColorSets(color1: Color.ccPrimaryPurple, color2: Color.ccPrimaryPurple, color3: Color.ccPrimaryPurple, color4: Color.ccGray3), dayNow: dayNow)
+                        CircleView(colorSet: ColorSets(color1: Color.ccPrimaryPurple, color2: Color.ccPrimaryPurple, color3: Color.ccPrimaryPurple, color4: Color.ccGray3), frameCycle: FrameSets(cycleX: 260, cycleY: 260), dayNow: dayNow)
                         PeriodView(period: PeriodViewModel(fromCycle: 0.1, toCycle: 0.2, angleCycle: 0), colorTracker: Color.ccRed)
                         PeriodView(period: PeriodViewModel(fromCycle: 0.1, toCycle: 0.15, angleCycle: 180), colorTracker: Color.ccBlue)
                         DayNow()
