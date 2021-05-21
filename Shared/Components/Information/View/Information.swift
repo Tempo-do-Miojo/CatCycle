@@ -10,16 +10,27 @@ import SwiftUI
 struct Information: View {
     let viewModel: InformationViewModel
 
+    var isSectionEnable: Bool = true
+    private var isWatchOS: Bool = false
+
+    init(titles: [String], infos: [InfoData]) {
+        viewModel = InformationViewModel(titles: titles, info: infos)
+
+        #if os(watchOS)
+            isWatchOS = true
+        #endif
+    }
+
     var body: some View {
-        VStack(alignment: .leading, spacing: 16) {
+        VStack(alignment: .leading, spacing: isWatchOS ? 8 : 16) {
             HStack {
-                SegmentControl(titles: ["Day 20"])
+                SegmentControl(titles: viewModel.titles)
                     .lineSpacing(100)
-                    .padding(.bottom, 8)
+                    .padding(.bottom, isWatchOS ? 4 : 8)
                 Spacer()
             }
 
-            if viewModel.info.isEmpty {
+            if viewModel.info.isEmpty && !isWatchOS {
                 Rectangle()
                     .foregroundColor(.clear)
                     .background(EmptyStateView().padding(.bottom, 24))
@@ -29,6 +40,8 @@ struct Information: View {
             if !viewModel.infoFilter(type: .bleeding).isEmpty {
                 sectionContent(.bleeding)
                 Divider()
+                    .padding(.horizontal, isWatchOS ? 8 : 24)
+                    .foregroundColor(.ccGray2.opacity(0.3))
             }
 
             if !viewModel.infoFilter(type: .symptoms).isEmpty {
@@ -36,10 +49,12 @@ struct Information: View {
             }
         }
     }
-
     func sectionContent(_ type: DataTrackingType) -> some View {
-        return VStack(alignment: .leading, spacing: 16) {
-            sectionTitle(type.rawValue)
+        return VStack(alignment: .leading, spacing: isWatchOS ? 8 : 16) {
+            #if os(iOS)
+                sectionTitle(type.rawValue)
+            #endif
+
             ForEach(viewModel.infoFilter(type: type)) { info in
                 InfoRow(infoData: info)
 
@@ -56,12 +71,10 @@ struct Information: View {
 
 struct Information_Previews: PreviewProvider {
     static var previews: some View {
-        Information(viewModel: .init(info:
-                        [.init(id: 0, iconName: "Bleeding_Medium", text: "Medium", type: .bleeding),
-                         .init(id: 1, iconName: "Symptoms_Cramps", text: "Cramps", type: .symptoms)]))
-            .previewLayout(.sizeThatFits)
-
-        Information(viewModel: .init(info: []))
+        Information(titles: [], infos: [])
             .previewLayout(.sizeThatFits)
     }
 }
+//init(info:
+//[.init(id: 0, iconName: "Bleeding_Medium", text: "Medium", type: .bleeding),
+//.init(id: 1, iconName: "Symptoms_Cramps", text: "Cramps", type: .symptoms)]

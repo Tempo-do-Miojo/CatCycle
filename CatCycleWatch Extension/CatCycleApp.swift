@@ -12,7 +12,7 @@ struct CatCycleApp: App {
     @SceneBuilder var body: some Scene {
         WindowGroup {
             NavigationView {
-                ContentView(scaleDevice: CGSize(width: 0.55, height: 0.55))
+                ContentView()
             }
         }
 

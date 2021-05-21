@@ -10,6 +10,8 @@ import SwiftUI
 struct InfoRow: View {
     let infoData: InfoData
 
+    @Environment(\.colorScheme) var colorScheme
+
     var body: some View {
         HStack(spacing: 12) {
             ZStack {
@@ -20,6 +22,9 @@ struct InfoRow: View {
                 Image(infoData.iconName)
             }
             Text(infoData.text)
+                .font(.ccParagraph3)
+                .foregroundColor(colorScheme == .dark ? .ccGray3 : .ccGray1)
+
             Spacer()
         }
     }

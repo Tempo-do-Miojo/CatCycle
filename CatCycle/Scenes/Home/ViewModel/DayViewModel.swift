@@ -9,12 +9,6 @@ import SwiftUI
 
 class DayViewModel {
 
-    func getTextFromDate(date: Date!) -> String {
-        let formatter = DateFormatter()
-        formatter.locale = .current
-        formatter.dateFormat = "dd"
-        return date == nil ? "?" : formatter.string(from: date)
-    }
     func getAngle(date: Date!) -> Double {
         let formatter = DateFormatter()
         formatter.locale = .current
