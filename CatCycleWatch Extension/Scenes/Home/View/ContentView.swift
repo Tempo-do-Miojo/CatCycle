@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct ContentView: View {
-    var scaleDevice: CGSize
 
     var body: some View {
         ScrollView(showsIndicators: false) {
@@ -16,8 +15,7 @@ struct ContentView: View {
                 CircleView(colorSet: ColorSets(color1: Color.ccPrimaryPurple,
                                                color2: Color.ccPrimaryPurple,
                                                color3: Color.ccPrimaryPurple,
-                                               color4: Color.black))
-                    .scaleEffect(scaleDevice, anchor: .center)
+                                               color4: Color.black), frameCycle: .init(cycleX: 140, cycleY: 140))
                     .frame(width: 150, height: 150, alignment: .center)
 
             }
@@ -38,12 +36,11 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         return Group {
-            ContentView(scaleDevice: CGSize(width: 0.55, height: 0.55))
+            ContentView()
                 .previewDevice("Apple Watch Series 5 - 40mm")
-            ContentView(scaleDevice: CGSize(width: 0.55, height: 0.55))
+            ContentView()
                 .previewLayout(.sizeThatFits)
 
         }
     }
 }
-
