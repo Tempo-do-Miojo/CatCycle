@@ -13,6 +13,8 @@ struct CalendarView: View {
 
     @State var selectedDay: Day?
     @StateObject var model = Model()
+    @State var month = Date()
+
     var body: some View {
         ZStack {
             Color.ccGray3.edgesIgnoringSafeArea(.all)
@@ -20,7 +22,7 @@ struct CalendarView: View {
                 VStack(spacing: 40) {
                     HeaderNavigation()
                     HStack {
-                        HeaderCalendar()
+                        HeaderCalendar(month: $month)
                         Spacer()
                     }.padding(.leading, 24)
                 }
@@ -34,8 +36,9 @@ struct CalendarView: View {
                 }.padding(.horizontal, 10)
                 HStack {
                     LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 0), count: 7), spacing: 0) {
-                        ForEach(model.generateDaysInMonth(for: model.getDate(month: 01)), id: \.self) { day in
-                            DayView(day: day, isSelected: day == selectedDay)
+                        let monthInt = Calendar.current.component(.month, from: month)
+                        ForEach(model.generateDaysInMonth(for: model.getDate(month: monthInt)), id: \.self) { day in
+                            DayView(day: day, isSelected: day == selectedDay, month: $month)
                                 .onTapGesture {
                                     selectedDay = day
                                 }
@@ -50,7 +53,7 @@ struct CalendarView: View {
 
 struct HeaderCalendar: View {
     @StateObject var model = Model()
-    @State private var month = Date()
+    @Binding var month: Date
     @State private var showSheet = false
     var body: some View {
         Button(action: {
@@ -68,24 +71,6 @@ struct HeaderCalendar: View {
 }
 
 struct HeaderNavigation: View {
-
-//    var body: some View {
-//        ZStack {
-//            Text("Calendar")
-//                .foregroundColor(Color.ccGray1)
-//                .font(Font.ccParagraph1)
-//
-//            Button(action: {}) {
-//                Image(systemName: "chevron.left")
-//                    .foregroundColor(Color.ccPrimaryPurple)
-//            }
-//            .padding(.leading, 20)
-//            .frame(maxWidth: .infinity, alignment: .leading)
-//        }
-//        .frame(maxWidth: .infinity)
-//        .border(Color.black)
-//
-//    }
 
     var body: some View {
         Text("Calendar")
@@ -109,6 +94,7 @@ struct HeaderNavigation: View {
 struct DayView: View {
     let day: Day
     let isSelected: Bool
+    @Binding var month: Date
     var body: some View {
         Rectangle()
             .fill(Color.clear)
@@ -117,13 +103,12 @@ struct DayView: View {
                 ZStack {
                     Circle()
                         .frame(width: 30, height: 30)
-                        .foregroundColor(day.number ==  Model().dateDayFormatter.string(from: Date()) ? Color.ccPrimaryPurple : Color.clear)
+                        .foregroundColor(day.number ==  Model().dateDayFormatter.string(from: Date()) && Calendar.current.component(.month, from: month) == Calendar.current.component(.month, from: Date()) ? Color.ccPrimaryPurple : Color.clear)
                     Circle()
-                        .stroke(day.number ==  Model().dateDayFormatter.string(from: Date()) ? Color.black : Color.clear, style: StrokeStyle(lineWidth: 1.5, lineCap: .round, lineJoin: .round, dash: [0.5, 3.6], dashPhase: 10))
+                        .stroke(day.number ==  Model().dateDayFormatter.string(from: Date()) && Calendar.current.component(.month, from: month) == Calendar.current.component(.month, from: Date()) ? Color.black : Color.clear, style: StrokeStyle(lineWidth: 1.5, lineCap: .round, lineJoin: .round, dash: [0.5, 3.6], dashPhase: 10))
                         .frame(width: 35, height: 35)
                     Text(day.number)
-                        .foregroundColor(day.number ==  Model().dateDayFormatter.string(from: Date()) ? Color.white : Color.ccGray2 )
-                    //                        .foregroundColor(day.number == Model())
+                        .foregroundColor(day.number ==  Model().dateDayFormatter.string(from: Date()) && Calendar.current.component(.month, from: month) == Calendar.current.component(.month, from: Date()) ? Color.white : Color.ccGray2 )
                 }
             )
             .opacity(day.isWithinDisplayedMonth ? 1 : 0)
