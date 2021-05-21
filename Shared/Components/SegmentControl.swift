@@ -9,6 +9,7 @@ import SwiftUI
 
 private struct Section: Identifiable {
     let title: String
+    // swiftlint:disable identifier_name
     let id: Int
 }
 
@@ -71,6 +72,7 @@ struct SegmentControl: View {
     }
 
     private func createSections(titles: [String]) -> [Section] {
+        // swiftlint:disable identifier_name
         var id = 0
         var sections = [Section]()
 

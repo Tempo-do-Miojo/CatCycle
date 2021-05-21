@@ -10,7 +10,8 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
             ZStack(alignment: .center) {
-                CircleView(colorSet: ColorSets(color1: Color.blue, color2: Color.blue, color3: Color.blue, color4: Color.white), frameCycle: FrameSets(cycleX: 180, cycleY: 180))
+                CircleView(colorSet: ColorSets(color1: Color.blue, color2: Color.blue, color3: Color.blue,
+                                               color4: Color.white), frameCycle: FrameSets(cycleX: 180, cycleY: 180))
                 }
             .navigationTitle("My period")
     }
