@@ -24,6 +24,8 @@ struct TrackingCell: View {
             .buttonStyle(StateableButton(change: { _ in
                 return Image(model.iconName)
                     .renderingMode(.template)
+                    .resizable()
+                    .frame(width: 32, height: 32)
                     .foregroundColor(selected ? colorCondition.nonSelected : colorCondition.selected)
                     .padding(.all, 41)
                     .background(selected ? colorCondition.selected : colorCondition.nonSelected)
@@ -33,6 +35,7 @@ struct TrackingCell: View {
             }))
             .cornerRadius(8)
             Text(model.text)
+                .padding(.top, 8)
                 .font(.ccParagraph1)
                 .foregroundColor(.ccGray2)
         }

@@ -15,9 +15,11 @@ struct TrackingView: View {
                 SegmentControl(titles: ["Bleeding", "Symptoms"])
                     .padding(.top, 64)
                     .padding(.leading, 24)
-                Image("Close")
-                    .padding(.trailing, 24)
-                    .padding(.top, 24)
+                Button(action: {}, label: {
+                    Image("Close")
+                })
+                .padding(.trailing, 24)
+                .padding(.top, 24)
             }
             Spacer()
             CollectionTrackingView(model: model)
@@ -38,10 +40,10 @@ struct TrackingView: View {
 struct TrackingView_Previews: PreviewProvider {
     static var previews: some View {
         let model = [
-            InfoData(id: 0, iconName: "Symptoms_Cramps", text: "Medium", type: .bleeding),
-            InfoData(id: 1, iconName: "Symptoms_Cramps", text: "Light", type: .bleeding),
-            InfoData(id: 2, iconName: "Symptoms_Cramps", text: "Spotting", type: .bleeding),
-            InfoData(id: 3, iconName: "Symptoms_Cramps", text: "Heavy", type: .bleeding)
+            InfoData(id: 0, iconName: "Bleeding_Light", text: "Light", type: .bleeding),
+            InfoData(id: 1, iconName: "Bleeding_Spotting", text: "Spotting", type: .bleeding),
+            InfoData(id: 2, iconName: "Bleeding_Medium", text: "Medium", type: .bleeding),
+            InfoData(id: 3, iconName: "Bleeding_Heavy", text: "Heavy", type: .bleeding)
         ]
         TrackingView(model: model)
     }
