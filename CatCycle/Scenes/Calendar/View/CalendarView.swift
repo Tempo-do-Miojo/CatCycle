@@ -13,12 +13,13 @@ struct CalendarView: View {
 
     @State var selectedDay: Day?
     @StateObject var model = Model()
+    @Binding var isPresented: Bool
     var body: some View {
         ZStack {
             Color.ccGray3.edgesIgnoringSafeArea(.all)
             VStack {
                 VStack(spacing: 40) {
-                    HeaderNavigation()
+                    HeaderNavigation(isPresented: $isPresented)
                     HStack {
                         HeaderCalendar()
                         Spacer()
@@ -68,25 +69,7 @@ struct HeaderCalendar: View {
 }
 
 struct HeaderNavigation: View {
-
-//    var body: some View {
-//        ZStack {
-//            Text("Calendar")
-//                .foregroundColor(Color.ccGray1)
-//                .font(Font.ccParagraph1)
-//
-//            Button(action: {}) {
-//                Image(systemName: "chevron.left")
-//                    .foregroundColor(Color.ccPrimaryPurple)
-//            }
-//            .padding(.leading, 20)
-//            .frame(maxWidth: .infinity, alignment: .leading)
-//        }
-//        .frame(maxWidth: .infinity)
-//        .border(Color.black)
-//
-//    }
-
+    @Binding var isPresented: Bool
     var body: some View {
         Text("Calendar")
             .foregroundColor(Color.ccGray1)
@@ -97,10 +80,12 @@ struct HeaderNavigation: View {
     }
 
     var backButton: some View {
-        Button(action: {}) {
+        Button(action: {
+            isPresented = false
+        }, label: {
             Image(systemName: "chevron.left")
                 .foregroundColor(Color.ccPrimaryPurple)
-        }
+        })
         .padding()
     }
 
@@ -132,7 +117,7 @@ struct DayView: View {
 
 struct CalendarView_Previews: PreviewProvider {
     static var previews: some View {
-        CalendarView()
+        CalendarView(isPresented: .constant(true))
     }
 }
 
