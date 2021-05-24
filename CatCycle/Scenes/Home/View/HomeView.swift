@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct HomeView: View {
-    @State private var showingCalendarView = false
+    @State private var showCalendar = false
     var dayNow: Date = Date()
     var body: some View {
             ZStack {
@@ -22,7 +22,7 @@ struct HomeView: View {
                         .padding(.leading, 20)
                         Spacer(minLength: 10)
                             Button(action: {
-                                self.showingCalendarView = true
+                                showCalendar.toggle()
                             }, label: {
                                 Image("Calendar_active")
                                     .scaledToFit()
@@ -40,7 +40,12 @@ struct HomeView: View {
                         .padding(.horizontal,24)
                     Spacer()
                 }
+                if showCalendar {
+                    CalendarView(isPresented: $showCalendar)
+                        .transition(.move(edge: .trailing))
+                }
             }
+            .animation(.default, value: showCalendar)
         }
     func getTextFromDate(date: Date!) -> String {
         let formatter = DateFormatter()
