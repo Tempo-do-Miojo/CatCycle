@@ -8,6 +8,7 @@
 import Foundation
 
 struct InfoData: Identifiable {
+    // swiftlint:disable identifier_name
     var id: Int
 
     let iconName: String

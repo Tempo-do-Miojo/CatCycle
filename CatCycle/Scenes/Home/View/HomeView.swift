@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct HomeView: View {
-    @State private var showingCalendarView = false
+    @State private var showCalendar = false
     var dayNow: Date = Date()
     var body: some View {
             ZStack {
@@ -16,13 +16,13 @@ struct HomeView: View {
                 VStack {
                     HStack(alignment: .center) {
                         VStack(alignment: .leading) {
-                            Text("Olá").font(.ccTitle2).foregroundColor(Color.ccGray1)
+                            Text("Olá").font(.ccParagraph1).foregroundColor(Color.ccGray1)
                             Text("Cris").font(.ccLargeTitle).foregroundColor(Color.ccGray1).bold()
                         }
                         .padding(.leading, 20)
                         Spacer(minLength: 10)
                             Button(action: {
-                                self.showingCalendarView = true
+                                showCalendar.toggle()
                             }, label: {
                                 Image("Calendar_active")
                                     .scaledToFit()
@@ -36,11 +36,16 @@ struct HomeView: View {
                         PeriodView(period: PeriodViewModel(fromCycle: 0.1, toCycle: 0.15, angleCycle: 180), colorTracker: Color.ccBlue)
                         DayNow()
                     }
-//                    Information(titles: , infos: )
+                    Information(titles: ["Day"], infos: [.init(id: 0, iconName: "Bleeding_Medium", text: "Medium", type: .bleeding), .init(id: 1, iconName: "Symptoms_Cramps", text: "Medium", type: .symptoms)])
                         .padding(.horizontal,24)
                     Spacer()
                 }
+                if showCalendar {
+                    CalendarView(isPresented: $showCalendar)
+                        .transition(.move(edge: .trailing))
+                }
             }
+            .animation(.default, value: showCalendar)
         }
     func getTextFromDate(date: Date!) -> String {
         let formatter = DateFormatter()
