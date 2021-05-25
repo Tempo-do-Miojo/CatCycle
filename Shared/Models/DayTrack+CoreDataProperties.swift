@@ -2,12 +2,13 @@
 //  DayTrack+CoreDataProperties.swift
 //  CatCycle
 //
-//  Created by Lucas Oliveira on 24/05/21.
+//  Created by Lucas Oliveira on 25/05/21.
 //
 //
 
 import Foundation
 import CoreData
+
 
 extension DayTrack {
 
@@ -15,18 +16,22 @@ extension DayTrack {
         return NSFetchRequest<DayTrack>(entityName: "DayTrack")
     }
 
-    @NSManaged public var date: Date?
     @NSManaged public var bleedingRawValue: String?
-    @NSManaged public var symptomsRawValue: String?
+    @NSManaged public var date: Date?
+    @NSManaged public var symptomsRawValue: [String]?
 
     var bleeding: Bleeding? {
         return Bleeding(rawValue: bleedingRawValue ?? "")
     }
 
-    var symptoms: Symptoms? {
-        return Symptoms(rawValue: symptomsRawValue ?? "")
+    var symptoms: [Symptoms]? {
+        var symptoms = [Symptoms]()
+        symptomsRawValue?.forEach { content in
+            guard let symptom = Symptoms(rawValue: content) else { return }
+            symptoms.append(symptom)
+        }
+        return symptoms
     }
-
 }
 
 extension DayTrack : Identifiable {
