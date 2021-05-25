@@ -11,6 +11,7 @@ import Liquid
 struct CircleView: View {
     @ObservedObject var colorSet: ColorSets
     @ObservedObject var frameCycle: FrameSets
+    @Environment(\.colorScheme) var colorScheme
     var dayNow: Date = Date()
     var body: some View {
         ZStack {
@@ -48,11 +49,11 @@ struct CircleView: View {
             #else
             Text("Day")
                 .font(.ccTitle3)
-                .foregroundColor(Color.ccGray1)
+                .foregroundColor(colorScheme == .light ? Color.ccGray1 : Color.ccGray3)
                 .padding(.bottom, -4)
             Text("\(getTextFromDate(date: dayNow))")
                 .font(.ccTitle1)
-                .foregroundColor(Color.ccGray1)
+                .foregroundColor(colorScheme == .light ? Color.ccGray1 : Color.ccGray3)
             #endif
         }
     }
