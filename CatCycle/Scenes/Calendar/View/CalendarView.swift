@@ -57,10 +57,13 @@ struct CalendarView: View {
         if selectedDays.contains(day.number) {
             if selectedDays.first == day.number {
                 RoundedCorner(radius: 25, corners: [.topLeft, .bottomLeft]).fill(isBleending ? Color.ccRed : Color.ccBlue)
+                    .padding(.vertical, 10)
             } else if selectedDays.last == day.number {
                 RoundedCorner(radius: 25, corners: [.topRight, .bottomRight]).fill(isBleending ? Color.ccRed : Color.ccBlue)
+                    .padding(.vertical, 10)
             } else {
                 Rectangle().fill(isBleending ? Color.ccRed : Color.ccBlue)
+                    .padding(.vertical, 10)
             }
         }
     }
