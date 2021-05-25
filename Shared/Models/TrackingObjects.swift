@@ -8,15 +8,15 @@
 import Foundation
 
 enum Bleeding: String {
-    case light = "BleedingLight"
-    case medium = "BleedingMedium"
-    case heavy = "BleedingHeavy"
-    case spotting = "BleedingSpotting"
+    case light = "Bleeding_Light"
+    case medium = "Bleeding_Medium"
+    case heavy = "Bleeding_Heavy"
+    case spotting = "Bleeding_Spotting"
 }
 
 enum Symptoms: String {
-    case cramps = "SymptomsCramps"
-    case headache = "SymptomsHeadache"
-    case pms = "SymptomsPMS"
-    case ovulation = "SymptomsOvulation"
+    case cramps = "Symptoms_Cramps"
+    case headache = "Symptoms_Headache"
+    case pms = "Symptoms_PMS"
+    case ovulation = "Symptoms_Ovulation"
 }
