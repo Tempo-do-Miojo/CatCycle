@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct TrackingView: View {
-    let model: [InfoData]
+    let model: [[InfoData]]
     var body: some View {
         VStack {
             HStack {
@@ -40,10 +40,10 @@ struct TrackingView: View {
 struct TrackingView_Previews: PreviewProvider {
     static var previews: some View {
         let model = [
-            InfoData(id: 0, iconName: "Bleeding_Light", text: "Light", type: .bleeding),
-            InfoData(id: 1, iconName: "Bleeding_Spotting", text: "Spotting", type: .bleeding),
-            InfoData(id: 2, iconName: "Bleeding_Medium", text: "Medium", type: .bleeding),
-            InfoData(id: 3, iconName: "Bleeding_Heavy", text: "Heavy", type: .bleeding)
+            [InfoData(id: 0, iconName: "Bleeding_Light", text: "Light", type: .bleeding),
+            InfoData(id: 1, iconName: "Bleeding_Spotting", text: "Spotting", type: .bleeding)],
+            [InfoData(id: 2, iconName: "Bleeding_Medium", text: "Medium", type: .bleeding),
+            InfoData(id: 3, iconName: "Bleeding_Heavy", text: "Heavy", type: .bleeding)]
         ]
         TrackingView(model: model)
     }
