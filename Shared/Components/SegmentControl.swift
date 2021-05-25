@@ -6,10 +6,10 @@
 //
 
 import SwiftUI
+// swiftlint:disable identifier_name
 
 private struct Section: Identifiable {
     let title: String
-    // swiftlint:disable identifier_name
     let id: Int
 }
 
@@ -18,10 +18,17 @@ struct SegmentControl: View {
 
     @Environment(\.colorScheme) var colorScheme
     @Namespace private var namespace
-    @State private var index = 0
+    @State var index = 0 {
+        didSet {
+            didChangeIndex?(index)
+        }
+    }
+    var didChangeIndex: ((_ index: Int) -> Void)?
 
-    init(titles: [String]) {
+    init(titles: [String], index: Int = 0, didChangeIndex: ((Int) -> Void)? = nil) {
         sections = createSections(titles: titles)
+        self.didChangeIndex = didChangeIndex
+        self.index = index
     }
 
     var body: some View {
@@ -72,7 +79,6 @@ struct SegmentControl: View {
     }
 
     private func createSections(titles: [String]) -> [Section] {
-        // swiftlint:disable identifier_name
         var id = 0
         var sections = [Section]()
 
