@@ -18,7 +18,7 @@ struct StateableButton<Content>: ButtonStyle where Content: View {
 struct Selection_Previews: PreviewProvider {
     static var previews: some View {
         let model = InfoData(id: 0, iconName: "Symptoms_Cramps", text: "Cramps", type: .symptoms)
-        TrackingCell(model: model)
+        TrackingCell(model: model, action: {})
         .previewLayout(PreviewLayout.sizeThatFits)
     }
 }

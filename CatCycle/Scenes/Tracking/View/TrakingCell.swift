@@ -10,15 +10,12 @@ import SwiftUI
 struct TrackingCell: View {
 
     @State var model: InfoData
-    @State var selected: Bool = false
+    var selected: Bool = false
+    var action: () -> Void
 
     var body: some View {
         VStack {
-            Button(action: {
-                withAnimation {
-                    selected.toggle()
-                }
-            }, label: {
+            Button(action: action, label: {
                 Image(model.iconName)
             })
             .buttonStyle(StateableButton(change: { _ in
