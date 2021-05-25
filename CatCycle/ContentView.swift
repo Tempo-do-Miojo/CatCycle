@@ -11,34 +11,31 @@ import CoreData
 struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
 
-    @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
-        animation: .default)
-    private var items: FetchedResults<Item>
+    private var items = CoreDataManager.fetchDay(in: 5, year: 2021)
 
     var body: some View {
-        SegmentControl(titles: ["Day 20", "Overview"])
-        List {
-            ForEach(items) { item in
-                Text("Item at \(item.timestamp!, formatter: itemFormatter)")
+        NavigationView {
+        VStack {
+            List {
+                ForEach(0..<items.count) { index in
+                    Text("Item at \(items[index].bleedingRawValue ?? "")")
+                }
+                .onDelete(perform: deleteItems)
             }
-            .onDelete(perform: deleteItems)
-        }
-        .toolbar {
-            #if os(iOS)
-            EditButton()
-            #endif
-
-            Button(action: addItem) {
-                Label("Add Item", systemImage: "plus")
+            .toolbar {
+                Button(action: addItem) {
+                    Label("Add Item", systemImage: "plus")
+                }
+                }
             }
         }
     }
 
     private func addItem() {
         withAnimation {
-            let newItem = Item(context: viewContext)
-            newItem.timestamp = Date()
+            let newItem = DayTrack.init(context: viewContext)
+            newItem.date = Date()
+            newItem.bleedingRawValue = Bleeding.heavy.rawValue
 
             do {
                 try viewContext.save()
