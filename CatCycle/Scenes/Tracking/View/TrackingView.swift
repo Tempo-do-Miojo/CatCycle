@@ -8,33 +8,66 @@
 import SwiftUI
 
 struct TrackingView: View {
-    let model: [[InfoData]]
+    let bleeding: [[InfoData]]
+    let symptoms: [[InfoData]]
+
+    @State var indexSegmentedControl = 0
+    @Environment(\.presentationMode) var presentationMode
+
     var body: some View {
         VStack {
             HStack {
-                SegmentControl(titles: ["Bleeding", "Symptoms"])
+                SegmentControl(titles: ["Bleeding", "Symptoms"],
+                               index: indexSegmentedControl + 1,
+                               didChangeIndex: { index in
+                    indexSegmentedControl = index
+                })
                     .padding(.top, 64)
                     .padding(.leading, 24)
-                Button(action: {}, label: {
+                Button(action: {
+                    presentationMode.wrappedValue.dismiss()
+                }, label: {
                     Image("Close")
                 })
                 .padding(.trailing, 24)
                 .padding(.top, 24)
             }
             Spacer()
-            CollectionTrackingView(model: model)
+            if indexSegmentedControl == 0 {
+                CollectionTrackingView(model: bleeding)
+            }
+            if indexSegmentedControl == 1 {
+                CollectionTrackingView(model: symptoms)
+            }
             Spacer()
             HStack {
                 Spacer()
-                CCButton(action: {
-                    print("Saving")
-                }, type: .forwardBtn)
+                buttonSaveComponent
                 .cornerRadius(8)
                 .padding(.trailing, 24)
                 .padding(.bottom, 24)
             }
         }
     }
+
+    var collectionTrackingComponent: some View {
+        if indexSegmentedControl == 0 {
+            return CollectionTrackingView(model: bleeding)
+        }
+        return CollectionTrackingView(model: symptoms)
+    }
+
+    var buttonSaveComponent: some View {
+        if indexSegmentedControl == 0 {
+            return CCButton(action: {
+                indexSegmentedControl += 1
+            }, type: .forwardBtn)
+        }
+        return CCButton(action: {
+            print("Save")
+        }, type: .saveBtn)
+    }
+
 }
 
 struct TrackingView_Previews: PreviewProvider {
@@ -45,6 +78,6 @@ struct TrackingView_Previews: PreviewProvider {
             [InfoData(id: 2, iconName: "Bleeding_Medium", text: "Medium", type: .bleeding),
             InfoData(id: 3, iconName: "Bleeding_Heavy", text: "Heavy", type: .bleeding)]
         ]
-        TrackingView(model: model)
+        TrackingView(bleeding: model, symptoms: model)
     }
 }
