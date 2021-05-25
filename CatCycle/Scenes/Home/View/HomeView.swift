@@ -9,6 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     @State private var showCalendar = false
+    @State private var showTracker = false
     @Environment(\.colorScheme) var colorScheme
     var dayNow: Date = Date()
     var body: some View {
@@ -30,7 +31,8 @@ struct HomeView: View {
                                     showCalendar.toggle()
                             }, label: {
                                 Image("Calendar_active")
-                                    .scaledToFit()
+                                    .renderingMode(.template)
+                                    .foregroundColor(colorScheme == .dark ? Color.ccGray3 : Color.ccGray1)
                             })
                             .padding(.trailing, 20)
                     }
@@ -41,8 +43,26 @@ struct HomeView: View {
                         PeriodView(period: PeriodViewModel(fromCycle: 0.1, toCycle: 0.15, angleCycle: 180), colorTracker: Color.ccBlue)
                         DayNow()
                     }
-                    Information(titles: ["Day"], infos: [.init(id: 0, iconName: "Bleeding_Medium", text: "Medium", type: .bleeding), .init(id: 1, iconName: "Symptoms_Cramps", text: "Medium", type: .symptoms)])
-                        .padding(.horizontal,24)
+                    Spacer()
+                    HStack(alignment: .top) {
+                        Information(titles: ["Day"], infos: [.init(id: 0, iconName: "Bleeding_Medium", text: "Medium", type: .bleeding), .init(id: 1, iconName: "Symptoms_Cramps", text: "Medium", type: .symptoms)])
+                            .padding(.horizontal, 24)
+                        Button(action: {
+                            withAnimation {
+                                showTracker.toggle()
+                            }
+                        }, label: {
+                            ZStack {
+                                Rectangle()
+                                    .frame(width: 40, height: 40)
+                                    .foregroundColor(.ccPrimaryPurple)
+                                    .cornerRadius(10)
+                                Image(systemName: "plus")
+                                    .foregroundColor(.ccGray3)
+                            }
+                        })
+                        .padding(.trailing, 20)
+                    }
                     Spacer()
                 }
                 if showCalendar {
@@ -50,8 +70,10 @@ struct HomeView: View {
                         .transition(.move(edge: .trailing))
                         .animation(.spring().delay(0.04))
                 }
+                if showTracker {
+                    //Presented TrackerView
+                }
             }
-            .animation(.default, value: showCalendar)
         }
     func getTextFromDate(date: Date!) -> String {
         let formatter = DateFormatter()
