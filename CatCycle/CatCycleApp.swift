@@ -14,6 +14,7 @@ struct CatCycleApp: App {
     var body: some Scene {
         WindowGroup {
             AppRouter().route()
+            
         }
     }
 }
