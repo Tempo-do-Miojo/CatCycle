@@ -31,6 +31,13 @@
 		034FAC872653E0880096F8CF /* SegmentControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034FAC862653E0880096F8CF /* SegmentControl.swift */; };
 		036979B12656A86B00A2671E /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036979B02656A86B00A2671E /* HomeViewModel.swift */; };
 		036979B22656AEE200A2671E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BB6E6FA264D5270009EA067 /* Assets.xcassets */; };
+		036979BF265BDEE600A2671E /* TrackingObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036979BE265BDEE600A2671E /* TrackingObjects.swift */; };
+		036979C2265BE36200A2671E /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036979C0265BE36200A2671E /* User+CoreDataClass.swift */; };
+		036979C3265BE36200A2671E /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036979C1265BE36200A2671E /* User+CoreDataProperties.swift */; };
+		036979C6265BE48200A2671E /* DayTrack+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036979C4265BE48200A2671E /* DayTrack+CoreDataClass.swift */; };
+		036979C7265BE48200A2671E /* DayTrack+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036979C5265BE48200A2671E /* DayTrack+CoreDataProperties.swift */; };
+		03A6FAF9265BF35A00CC3ADE /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A6FAF8265BF35A00CC3ADE /* CoreDataManager.swift */; };
+		03B120BF265D33D000DFF4EB /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B120BE265D33D000DFF4EB /* Date.swift */; };
 		03BC09902652A29C00DEC528 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		03BC09982652A60300DEC528 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BC09972652A60300DEC528 /* Color.swift */; };
 		03BC099A2652A84F00DEC528 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BC09992652A84F00DEC528 /* Fonts.swift */; };
@@ -171,6 +178,13 @@
 		030922A1265539D500B8F34F /* InformationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationViewModel.swift; sourceTree = "<group>"; };
 		034FAC862653E0880096F8CF /* SegmentControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentControl.swift; sourceTree = "<group>"; };
 		036979B02656A86B00A2671E /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		036979BE265BDEE600A2671E /* TrackingObjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingObjects.swift; sourceTree = "<group>"; };
+		036979C0265BE36200A2671E /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
+		036979C1265BE36200A2671E /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		036979C4265BE48200A2671E /* DayTrack+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DayTrack+CoreDataClass.swift"; sourceTree = "<group>"; };
+		036979C5265BE48200A2671E /* DayTrack+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DayTrack+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		03A6FAF8265BF35A00CC3ADE /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		03B120BE265D33D000DFF4EB /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		03BC09972652A60300DEC528 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		03BC09992652A84F00DEC528 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		03BC099C2652AB0B00DEC528 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
@@ -384,6 +398,34 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		036979BB265BDE2C00A2671E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				036979C0265BE36200A2671E /* User+CoreDataClass.swift */,
+				036979C1265BE36200A2671E /* User+CoreDataProperties.swift */,
+				036979C4265BE48200A2671E /* DayTrack+CoreDataClass.swift */,
+				036979C5265BE48200A2671E /* DayTrack+CoreDataProperties.swift */,
+				036979BE265BDEE600A2671E /* TrackingObjects.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		036979C8265BE5E600A2671E /* CoreData Manager */ = {
+			isa = PBXGroup;
+			children = (
+				03A6FAF8265BF35A00CC3ADE /* CoreDataManager.swift */,
+			);
+			path = "CoreData Manager";
+			sourceTree = "<group>";
+		};
+		03B120BD265D33C200DFF4EB /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				03B120BE265D33D000DFF4EB /* Date.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		03BC098D2652A24800DEC528 /* Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -563,6 +605,9 @@
 		7B8142482652A54E00D38999 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				03B120BD265D33C200DFF4EB /* Extension */,
+				036979C8265BE5E600A2671E /* CoreData Manager */,
+				036979BB265BDE2C00A2671E /* Models */,
 				03BC09962652A58D00DEC528 /* Assets */,
 				030922B02655738200B8F34F /* Components */,
 			);
@@ -1074,6 +1119,7 @@
 				8813E7DD2653FCF7000BEF16 /* CalendarViewModel.swift in Sources */,
 				8813E7DA2653E438000BEF16 /* CalendarView.swift in Sources */,
 				81AD5FDE2657E53B006930EF /* AppRouter.swift in Sources */,
+				03B120BF265D33D000DFF4EB /* Date.swift in Sources */,
 				7BB6E700264D5270009EA067 /* Persistence.swift in Sources */,
 				81AD5FE62657FD94006930EF /* CollectionTrackingView.swift in Sources */,
 				0309229C2655387100B8F34F /* InfoData.swift in Sources */,
@@ -1082,6 +1128,8 @@
 				81AD5FD926569AE2006930EF /* OnboardingData.swift in Sources */,
 				7B8142622653DF2200D38999 /* CycleView.swift in Sources */,
 				7B3559642653E05C007BE1ED /* ColorCycle.swift in Sources */,
+				036979C7265BE48200A2671E /* DayTrack+CoreDataProperties.swift in Sources */,
+				036979C6265BE48200A2671E /* DayTrack+CoreDataClass.swift in Sources */,
 				816F1997265407FB00071F40 /* Image.swift in Sources */,
 				816F1995265407D400071F40 /* EmptyStateView.swift in Sources */,
 				81AD5FEB265BD305006930EF /* SelectionButtonStyle.swift in Sources */,
@@ -1089,6 +1137,8 @@
 				7B8142562652B18700D38999 /* PeriodViewModel.swift in Sources */,
 				7BB6E703264D5270009EA067 /* CatCycle.xcdatamodeld in Sources */,
 				81897E872655358500DCE0C1 /* AddButton.swift in Sources */,
+				036979C3265BE36200A2671E /* User+CoreDataProperties.swift in Sources */,
+				036979BF265BDEE600A2671E /* TrackingObjects.swift in Sources */,
 				81AD5FD326569A55006930EF /* NameView.swift in Sources */,
 				7BB6E6F9264D526F009EA067 /* ContentView.swift in Sources */,
 				7BB6E6F7264D526F009EA067 /* CatCycleApp.swift in Sources */,
@@ -1096,7 +1146,12 @@
 				81AD5FED265BD618006930EF /* TrakingCell.swift in Sources */,
 				03BC09982652A60300DEC528 /* Color.swift in Sources */,
 				81897E89265559D700DCE0C1 /* OnboardingView.swift in Sources */,
+
+				03A6FAF9265BF35A00CC3ADE /* CoreDataManager.swift in Sources */,
+				036979C2265BE36200A2671E /* User+CoreDataClass.swift in Sources */,
+
 				81AD5FE42657FD37006930EF /* TrackingView.swift in Sources */,
+
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
