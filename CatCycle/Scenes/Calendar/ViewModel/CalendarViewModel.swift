@@ -26,7 +26,7 @@ class Model: ObservableObject {
     private let calendar = Calendar(identifier: .gregorian)
     lazy var dateComponents: DateComponents = {
         var date = DateComponents()
-        date.month = 11
+        date.month = 01
         date.day = 1
         date.year = 2021
         return date
@@ -57,7 +57,6 @@ class Model: ObservableObject {
         let date = calendar.date(from: dateComponents)!
         return date
     }
-
     func monthMetadata(for baseDate: Date) throws -> MonthMetadata {
         guard
             let numberOfDaysInMonth = calendar.range(of: .day, in: .month, for: baseDate)?.count,
