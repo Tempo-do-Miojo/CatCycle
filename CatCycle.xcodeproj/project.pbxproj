@@ -38,6 +38,7 @@
 		03B120C9265D610B00DFF4EB /* DayTrack+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B120C5265D610B00DFF4EB /* DayTrack+CoreDataProperties.swift */; };
 		03B120CA265D610B00DFF4EB /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B120C6265D610B00DFF4EB /* User+CoreDataClass.swift */; };
 		03B120CB265D610B00DFF4EB /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B120C7265D610B00DFF4EB /* User+CoreDataProperties.swift */; };
+		03B120CC265E720400DFF4EB /* AddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81897E862655358500DCE0C1 /* AddButton.swift */; };
 		03BC09902652A29C00DEC528 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		03BC09982652A60300DEC528 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BC09972652A60300DEC528 /* Color.swift */; };
 		03BC099A2652A84F00DEC528 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BC09992652A84F00DEC528 /* Fonts.swift */; };
@@ -357,6 +358,7 @@
 		030922B02655738200B8F34F /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				81897E862655358500DCE0C1 /* AddButton.swift */,
 				030922982655384D00B8F34F /* InfoRow */,
 				034FAC862653E0880096F8CF /* SegmentControl.swift */,
 				7B81425D2653DEAD00D38999 /* Cycle */,
@@ -429,7 +431,6 @@
 		03BC098D2652A24800DEC528 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				81897E862655358500DCE0C1 /* AddButton.swift */,
 				81AD5FDA2656AD33006930EF /* CCTextField.swift */,
 				81AD5FEA265BD305006930EF /* SelectionButtonStyle.swift */,
 			);
@@ -1083,6 +1084,7 @@
 				7B81425F2653DEC100D38999 /* CycleView.swift in Sources */,
 				7B8142152652A4E800D38999 /* NotificationView.swift in Sources */,
 				030922BB2655743F00B8F34F /* InformationViewModel.swift in Sources */,
+				03B120CC265E720400DFF4EB /* AddButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
