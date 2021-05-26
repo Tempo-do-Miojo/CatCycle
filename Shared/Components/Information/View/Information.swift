@@ -29,8 +29,10 @@ struct Information: View {
                     .lineSpacing(100)
                     .padding(.bottom, isWatchOS ? 4 : 8)
                 Spacer()
-                CCButton(action: {print("Apertou")}, type: .addBtn)
-                    .cornerRadius(10)
+                if !isWatchOS {
+                    CCButton(action: {print("Apertou")}, type: .addBtn)
+                        .cornerRadius(10)
+                }
             }
 
             if viewModel.info.isEmpty && !isWatchOS {

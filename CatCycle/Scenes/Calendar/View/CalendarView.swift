@@ -62,19 +62,7 @@ struct CalendarView: View {
             }
         }
         .sheet(item: $selectedDay) {day in
-            let modelBleeding = [
-                [InfoData(id: 0, iconName: "Bleeding_Light", text: "Light", type: .bleeding),
-                 InfoData(id: 1, iconName: "Bleeding_Spotting", text: "Spotting", type: .bleeding)],
-                [InfoData(id: 2, iconName: "Bleeding_Medium", text: "Medium", type: .bleeding),
-                 InfoData(id: 3, iconName: "Bleeding_Heavy", text: "Heavy", type: .bleeding)]
-            ]
-            let modelSymptoms = [
-                [InfoData(id: 0, iconName: "Symptoms_Cramps", text: "Cramps", type: .symptoms),
-                 InfoData(id: 1, iconName: "Symptoms_Headache", text: "Headache", type: .symptoms)],
-                [InfoData(id: 2, iconName: "Symptoms_Ovulation", text: "Ovulation", type: .symptoms),
-                 InfoData(id: 3, iconName: "Symptoms_PMS", text: "PMS", type: .symptoms)]
-            ]
-            TrackingView(bleeding: modelBleeding, symptoms: modelSymptoms, trackedDate: day.date)
+            TrackingView(trackedDate: day.date)
         }
     }
     @ViewBuilder fileprivate func backgroundPeriod(day: Day, selectedDays: [String], isBleending: Bool) -> some View {
