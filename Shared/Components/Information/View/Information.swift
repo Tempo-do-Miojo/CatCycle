@@ -9,6 +9,7 @@ import SwiftUI
 
 struct Information: View {
     let viewModel: InformationViewModel
+    @Environment(\.colorScheme) var colorScheme
 
     var isSectionEnable: Bool = true
     private var isWatchOS: Bool = false
@@ -28,6 +29,8 @@ struct Information: View {
                     .lineSpacing(100)
                     .padding(.bottom, isWatchOS ? 4 : 8)
                 Spacer()
+                CCButton(action: {print("Apertou")}, type: .addBtn)
+                    .cornerRadius(10)
             }
 
             if viewModel.info.isEmpty && !isWatchOS {
@@ -65,7 +68,7 @@ struct Information: View {
     func sectionTitle(_ text: String) -> some View {
          return Text(text)
             .font(.ccParagraph1)
-            .foregroundColor(.ccGray1)
+            .foregroundColor(colorScheme == .dark ? .ccGray3 : .ccGray1)
     }
 }
 
@@ -75,6 +78,3 @@ struct Information_Previews: PreviewProvider {
             .previewLayout(.sizeThatFits)
     }
 }
-//init(info:
-//[.init(id: 0, iconName: "Bleeding_Medium", text: "Medium", type: .bleeding),
-//.init(id: 1, iconName: "Symptoms_Cramps", text: "Cramps", type: .symptoms)]

@@ -20,6 +20,8 @@ struct InfoRow: View {
                     .foregroundColor(infoData.type == .bleeding ? .ccRed : .ccSecudaryPurple)
                     .cornerRadius(5)
                 Image(infoData.iconName)
+                    .renderingMode(.template)
+                    .foregroundColor(Color.ccGray3)
             }
             Text(infoData.text)
                 .font(.ccParagraph3)
