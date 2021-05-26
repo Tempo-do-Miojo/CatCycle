@@ -21,14 +21,19 @@ struct TrackingView: View {
     var body: some View {
         VStack {
             HStack {
-                SegmentControl(titles: ["Bleeding", "Symptoms"], index: $indexSegmentedControl)
-                    .padding(.top, 64)
-                    .padding(.leading, 24)
+                Text(dayTrackedString)
+                    .padding(.leading, 22)
+                Spacer()
                 Button(action: {
                     presentationMode.wrappedValue.dismiss()
                 }, label: {
                     Image("Close")
-                })
+                }).padding(.trailing, 24)
+            }.padding(.top, 24)
+            HStack {
+                SegmentControl(titles: ["Bleeding", "Symptoms"], index: $indexSegmentedControl)
+                    .padding(.top, 24)
+                    .padding(.leading, 24)
                 .padding(.trailing, 24)
                 .padding(.top, 24)
             }
@@ -79,10 +84,24 @@ struct TrackingView: View {
         }, type: .saveBtn)
     }
 
+    var dayTrackedString: String {
+        let calendar = Calendar.current
+        let day = String(calendar.component(.day, from: trackedDate))
+        return "\(trackedDate.month) \(day)"
+    }
+
 }
 
 struct TrackingView_Previews: PreviewProvider {
     static var previews: some View {
         TrackingView()
+    }
+}
+
+extension Date {
+    var month: String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MMMM"
+        return dateFormatter.string(from: self)
     }
 }
