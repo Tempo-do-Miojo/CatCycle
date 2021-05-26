@@ -13,12 +13,14 @@ struct CollectionTrackingView: View {
     @State var selectedId: Int?
     @State var multipleSelection: [Int] = []
 
+    var didSelectItem: ((Int?) -> Void)?
+    var didMultiSelectedItem: (([Int]) -> Void)?
+
     var body: some View {
         HStack {
             VStack {
                 trackingCellComponent(model: model[0])
-            }
-            .padding(.trailing)
+            }.padding(.trailing)
             VStack {
                 trackingCellComponent(model: model[1])
             }.padding(.leading)
@@ -39,7 +41,6 @@ struct CollectionTrackingView: View {
         if model.first?.first?.type == .bleeding {
             return id == selectedId
         }
-        print(multipleSelection.contains(id))
         return multipleSelection.contains(id)
     }
 
@@ -49,6 +50,7 @@ struct CollectionTrackingView: View {
                 selectedId = nil
             } else {
                 selectedId = id
+                didSelectItem?(id)
             }
             return
         }
@@ -56,6 +58,7 @@ struct CollectionTrackingView: View {
             multipleSelection = multipleSelection.filter { $0 != id }
         } else {
             multipleSelection.append(id)
+            didMultiSelectedItem?(multipleSelection)
         }
     }
 
