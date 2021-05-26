@@ -16,7 +16,6 @@ struct CalendarView: View {
     @Binding var isPresented: Bool
     var selectedDaysBleending: [String] = ["25", "26", "27", "28"]
     var selectedDaysSymptoms: [String] = ["1", "2", "3", "4"]
-        
     @State var month = Date()
     var body: some View {
         ZStack {

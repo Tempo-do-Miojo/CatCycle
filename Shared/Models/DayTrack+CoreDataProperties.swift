@@ -9,7 +9,6 @@
 import Foundation
 import CoreData
 
-
 extension DayTrack {
 
     @nonobjc public class func fetchRequest() -> NSFetchRequest<DayTrack> {
@@ -34,6 +33,4 @@ extension DayTrack {
     }
 }
 
-extension DayTrack : Identifiable {
-
-}
+extension DayTrack : Identifiable {}
