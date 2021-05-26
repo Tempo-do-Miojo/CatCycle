@@ -10,6 +10,7 @@ import SwiftUI
 struct StartPeriodView: View {
 
     let data: OnboardingData
+    @State private var dateSelected: Date = Date()
 
     var body: some View {
         VStack {
@@ -17,7 +18,8 @@ struct StartPeriodView: View {
                 .padding(.top, 68)
             Text(data.subTitle).font(.ccParagraph3).foregroundColor(.ccGray2)
                 .padding(.top, 6)
-            CalendarBaseView()
+            DatePicker("mês", selection: $dateSelected, displayedComponents: .date)
+                .datePickerStyle(WheelDatePickerStyle())
                 .padding(.top, 50)
             Spacer()
         }
