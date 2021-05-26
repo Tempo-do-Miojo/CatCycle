@@ -26,11 +26,16 @@ class CoreDataManager {
         }
     }
 
-    static func addDayTrack(date: Date, bleeding: Bleeding?, symptoms: Symptoms?) {
+    static func addDayTrack(date: Date, bleeding: Bleeding?, symptoms: [Symptoms]?) {
         let dayTrack = DayTrack(context: context)
 
         dayTrack.bleedingRawValue = bleeding?.rawValue
-        dayTrack.symptomsRawValue = symptoms?.rawValue
+
+        if let symptomsValid = symptoms {
+            let symptomsRawValueArray = symptomsValid.map {$0.rawValue}
+            dayTrack.symptomsRawValue = symptomsRawValueArray
+
+        }
         dayTrack.date = date
 
         do {

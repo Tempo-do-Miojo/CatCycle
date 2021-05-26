@@ -11,17 +11,17 @@ struct TrackingView: View {
     let bleeding: [[InfoData]]
     let symptoms: [[InfoData]]
 
+    @State var bleedingSelected: InfoData?
+    @State var symptomsSelected: [InfoData] = []
+    @State var trackedDate = Date()
+
     @State var indexSegmentedControl = 0
     @Environment(\.presentationMode) var presentationMode
 
     var body: some View {
         VStack {
             HStack {
-                SegmentControl(titles: ["Bleeding", "Symptoms"],
-                               index: indexSegmentedControl + 1,
-                               didChangeIndex: { index in
-                    indexSegmentedControl = index
-                })
+                SegmentControl(titles: ["Bleeding", "Symptoms"], index: $indexSegmentedControl)
                     .padding(.top, 64)
                     .padding(.leading, 24)
                 Button(action: {
@@ -34,10 +34,26 @@ struct TrackingView: View {
             }
             Spacer()
             if indexSegmentedControl == 0 {
-                CollectionTrackingView(model: bleeding)
+                CollectionTrackingView(model: bleeding, didSelectItem: { item in
+                    bleeding.forEach { bleedings in
+                        bleedings.forEach { bleeding in
+                            if bleeding.id == item {
+                                bleedingSelected = bleeding
+                            }
+                        }
+                    }
+                })
             }
             if indexSegmentedControl == 1 {
-                CollectionTrackingView(model: symptoms)
+                CollectionTrackingView(model: symptoms, didMultiSelectedItem: { items in
+                    symptoms.forEach { symptoms in
+                        symptoms.forEach { symptom in
+                            if items.contains(symptom.id) {
+                                symptomsSelected.append(symptom)
+                            }
+                        }
+                    }
+                })
             }
             Spacer()
             HStack {
@@ -50,13 +66,6 @@ struct TrackingView: View {
         }
     }
 
-    var collectionTrackingComponent: some View {
-        if indexSegmentedControl == 0 {
-            return CollectionTrackingView(model: bleeding)
-        }
-        return CollectionTrackingView(model: symptoms)
-    }
-
     var buttonSaveComponent: some View {
         if indexSegmentedControl == 0 {
             return CCButton(action: {
@@ -64,7 +73,9 @@ struct TrackingView: View {
             }, type: .forwardBtn)
         }
         return CCButton(action: {
-            print("Save")
+            let bleeding = Bleeding(rawValue: bleedingSelected?.iconName ?? "")
+            let symptoms = symptomsSelected.map { Symptoms(rawValue: $0.iconName)! }
+            CoreDataManager.addDayTrack(date: trackedDate, bleeding: bleeding, symptoms: symptoms)
         }, type: .saveBtn)
     }
 

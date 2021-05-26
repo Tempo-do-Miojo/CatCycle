@@ -18,17 +18,11 @@ struct SegmentControl: View {
 
     @Environment(\.colorScheme) var colorScheme
     @Namespace private var namespace
-    @State var index = 0 {
-        didSet {
-            didChangeIndex?(index)
-        }
-    }
-    var didChangeIndex: ((_ index: Int) -> Void)?
+    @Binding var index: Int
 
-    init(titles: [String], index: Int = 0, didChangeIndex: ((Int) -> Void)? = nil) {
+    init(titles: [String], index: Binding<Int>) {
+        self._index = index
         sections = createSections(titles: titles)
-        self.didChangeIndex = didChangeIndex
-        self.index = index
     }
 
     var body: some View {
@@ -94,9 +88,9 @@ struct SegmentControl: View {
 
 struct SegmentControl_Previews: PreviewProvider {
     static var previews: some View {
-        SegmentControl(titles: ["Day 20", "Day"])
+        SegmentControl(titles: ["Day 20", "Day"], index: .constant(0))
             .previewLayout(.sizeThatFits)
-        SegmentControl(titles: ["Day 20", "Day"])
+        SegmentControl(titles: ["Day 20", "Day"], index: .constant(0))
             .previewDevice("Apple Watch Series 6 - 40mm")
     }
 }

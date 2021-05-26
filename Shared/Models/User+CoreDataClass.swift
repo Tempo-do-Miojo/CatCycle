@@ -2,7 +2,7 @@
 //  User+CoreDataClass.swift
 //  CatCycle
 //
-//  Created by Lucas Oliveira on 24/05/21.
+//  Created by Lucas Oliveira on 25/05/21.
 //
 //
 
