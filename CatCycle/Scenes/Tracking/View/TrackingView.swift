@@ -13,6 +13,7 @@ struct TrackingView: View {
 
     @State var bleedingSelected: InfoData?
     @State var symptomsSelected: [InfoData] = []
+    @State var trackedDate = Date()
 
     @State var indexSegmentedControl = 0
     @Environment(\.presentationMode) var presentationMode
@@ -74,7 +75,7 @@ struct TrackingView: View {
         return CCButton(action: {
             let bleeding = Bleeding(rawValue: bleedingSelected?.iconName ?? "")
             let symptoms = symptomsSelected.map { Symptoms(rawValue: $0.iconName)! }
-            CoreDataManager.addDayTrack(date: Date(), bleeding: bleeding, symptoms: symptoms)
+            CoreDataManager.addDayTrack(date: trackedDate, bleeding: bleeding, symptoms: symptoms)
         }, type: .saveBtn)
     }
 
