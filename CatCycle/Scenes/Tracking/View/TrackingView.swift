@@ -23,6 +23,7 @@ struct TrackingView: View {
             HStack {
                 Text(dayTrackedString)
                     .padding(.leading, 22)
+                    .font(.ccParagraph2)
                 Spacer()
                 Button(action: {
                     presentationMode.wrappedValue.dismiss()
