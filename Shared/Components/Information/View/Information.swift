@@ -24,7 +24,7 @@ struct Information: View {
     var body: some View {
         VStack(alignment: .leading, spacing: isWatchOS ? 8 : 16) {
             HStack {
-                SegmentControl(titles: viewModel.titles)
+                SegmentControl(titles: viewModel.titles, index: .constant(0))
                     .lineSpacing(100)
                     .padding(.bottom, isWatchOS ? 4 : 8)
                 Spacer()
