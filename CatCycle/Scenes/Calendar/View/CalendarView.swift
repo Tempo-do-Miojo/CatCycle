@@ -44,10 +44,11 @@ struct CalendarView: View {
                 HStack {
                     LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 0), count: 7), spacing: 0) {
                         let monthInt = Calendar.current.component(.month, from: month)
+                        let yearInt = Calendar.current.component(.year, from: month)
                         ForEach(model.generateDaysInMonth(for: model.getDate(month: monthInt)), id: \.self) { day in
                             ZStack {
-                                backgroundPeriod(day: day, selectedDays: model.getCoreDataDaysTracker(month: monthInt, year: 2021) , isBleending: true)
-                                backgroundPeriod(day: day, selectedDays: selectedDaysSymptoms, isBleending: false)
+                                backgroundPeriod(day: day, selectedDays: model.getCoreDataDaysTracker(month: monthInt, year: yearInt) , isBleending: true)
+                                //backgroundPeriod(day: day, selectedDays: selectedDaysSymptoms, isBleending: false)
                                 DayView(day: day, isSelected: day == selectedDay, month: $month, selectedDaysBleending: $selectedDaysBleending)
                                     .onTapGesture {
                                         selectedDay = day
@@ -60,10 +61,28 @@ struct CalendarView: View {
                 Spacer()
             }
         }
+        .sheet(item: $selectedDay) {day in
+            let modelBleeding = [
+                [InfoData(id: 0, iconName: "Bleeding_Light", text: "Light", type: .bleeding),
+                 InfoData(id: 1, iconName: "Bleeding_Spotting", text: "Spotting", type: .bleeding)],
+                [InfoData(id: 2, iconName: "Bleeding_Medium", text: "Medium", type: .bleeding),
+                 InfoData(id: 3, iconName: "Bleeding_Heavy", text: "Heavy", type: .bleeding)]
+            ]
+            let modelSymptoms = [
+                [InfoData(id: 0, iconName: "Symptoms_Cramps", text: "Cramps", type: .symptoms),
+                 InfoData(id: 1, iconName: "Symptoms_Headache", text: "Headache", type: .symptoms)],
+                [InfoData(id: 2, iconName: "Symptoms_Ovulation", text: "Ovulation", type: .symptoms),
+                 InfoData(id: 3, iconName: "Symptoms_PMS", text: "PMS", type: .symptoms)]
+            ]
+            TrackingView(bleeding: modelBleeding, symptoms: modelSymptoms, trackedDate: day.date)
+        }
     }
     @ViewBuilder fileprivate func backgroundPeriod(day: Day, selectedDays: [String], isBleending: Bool) -> some View {
         if selectedDays.contains(day.number) {
-            if selectedDays.first == day.number {
+            if selectedDays.first == selectedDays.last {
+                RoundedCorner(radius: 25, corners: .allCorners).fill(isBleending ? Color.ccRed : Color.ccBlue)
+                    .padding(.vertical, 10)
+            } else if selectedDays.first == day.number {
                 RoundedCorner(radius: 25, corners: [.topLeft, .bottomLeft]).fill(isBleending ? Color.ccRed : Color.ccBlue)
                     .padding(.vertical, 10)
             } else if selectedDays.last == day.number {
@@ -106,7 +125,8 @@ struct HeaderCalendar: View {
                 .datePickerStyle(WheelDatePickerStyle())
                 .onDisappear {
                     let monthInt = Calendar.current.component(.month, from: month)
-                    selectedDaysBleending = model.getCoreDataDaysTracker(month: monthInt, year: 2021)
+                    let yearInt = Calendar.current.component(.year, from: month)
+                    selectedDaysBleending = model.getCoreDataDaysTracker(month: monthInt, year: yearInt)
                 }
         }
     }
@@ -136,14 +156,14 @@ struct HeaderNavigation: View {
 
 struct DayView: View {
     let day: Day
-    var isSelected: Bool
+    @State var isSelected: Bool
     @Environment(\.colorScheme) var colorScheme
     @Binding var month: Date
     @Binding var selectedDaysBleending: [String]
-    var selectedDaysSymptoms: [String] = ["1", "2", "3", "4"]
+    //var selectedDaysSymptoms: [String] = ["1", "2", "3", "4"]
     var showSheet = false
     var colorDayToShow: Color {
-        if day.number == Model().dateDayFormatter.string(from: Date()) && Calendar.current.component(.month, from: month) == Calendar.current.component(.month, from: Date()) || selectedDaysSymptoms.contains(day.number) || selectedDaysBleending.contains(day.number) {
+        if day.number == Model().dateDayFormatter.string(from: Date()) && Calendar.current.component(.month, from: month) == Calendar.current.component(.month, from: Date()) || selectedDaysBleending.contains(day.number) {
             return Color.white
         } else {
             return Color.ccGray2
@@ -169,7 +189,7 @@ struct DayView: View {
                         .stroke(day.number ==  Model().dateDayFormatter.string(from: Date()) && Calendar.current.component(.month, from: month) == Calendar.current.component(.month, from: Date()) ? colorStroke : Color.clear, style: StrokeStyle(lineWidth: 1.5, lineCap: .round, lineJoin: .round, dash: [0.5, 3.6], dashPhase: 10))
                         .frame(width: 35, height: 35)
                     Text(day.number)
-                        .foregroundColor(colorDayToShow)
+                        .foregroundColor(isSelected ? Color.red : colorDayToShow)
                 }
             )
     }

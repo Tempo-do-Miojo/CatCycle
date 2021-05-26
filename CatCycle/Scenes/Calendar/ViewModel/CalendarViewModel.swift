@@ -10,7 +10,12 @@ import SwiftUI
 import CoreData
 // swiftlint:disable identifier_name
 
-struct Day: Hashable {
+struct Day: Hashable, Identifiable {
+    
+    var id: Date {
+        self.date
+    }
+    
     let date: Date
     let number: String
     let isSelected: Bool
