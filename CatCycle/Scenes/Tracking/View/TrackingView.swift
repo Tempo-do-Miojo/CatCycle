@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct TrackingView: View {
-    let bleeding: [[InfoData]]
-    let symptoms: [[InfoData]]
+    let bleeding = TrackerModel.bleeding
+    let symptoms = TrackerModel.symptoms
 
     @State var bleedingSelected: InfoData?
     @State var symptomsSelected: [InfoData] = []
@@ -83,12 +83,6 @@ struct TrackingView: View {
 
 struct TrackingView_Previews: PreviewProvider {
     static var previews: some View {
-        let model = [
-            [InfoData(id: 0, iconName: "Bleeding_Light", text: "Light", type: .bleeding),
-            InfoData(id: 1, iconName: "Bleeding_Spotting", text: "Spotting", type: .bleeding)],
-            [InfoData(id: 2, iconName: "Bleeding_Medium", text: "Medium", type: .bleeding),
-            InfoData(id: 3, iconName: "Bleeding_Heavy", text: "Heavy", type: .bleeding)]
-        ]
-        TrackingView(bleeding: model, symptoms: model)
+        TrackingView()
     }
 }
