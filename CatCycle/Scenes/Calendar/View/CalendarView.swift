@@ -14,8 +14,9 @@ struct CalendarView: View {
     @State var selectedDay: Day?
     @StateObject var model = Model()
     @Binding var isPresented: Bool
-    var selectedDaysBleending: [String] = ["1", "2", "3", "4"]
-    var selectedDaysSymptoms: [String] = ["18", "19", "20", "21"]
+    var selectedDaysBleending: [String] = ["25", "26", "27", "28"]
+    var selectedDaysSymptoms: [String] = ["1", "2", "3", "4"]
+        
     @State var month = Date()
     var body: some View {
         ZStack {
@@ -53,6 +54,7 @@ struct CalendarView: View {
                                         selectedDay = day
                                     }
                             }
+                            .opacity(day.isWithinDisplayedMonth ? 1 : 0)
                         }
                     }
                 }.padding(.horizontal, 10)
@@ -93,7 +95,9 @@ struct HeaderCalendar: View {
         Button(action: {
             self.showSheet = true
         }, label: {
-            Text("\(model.dateMonthFormatter.string(from: month)) \(model.dateYearFormatter.string(from: month)) >")
+            Text("\(model.dateMonthFormatter.string(from: month)) \(model.dateYearFormatter.string(from: month))")
+                .foregroundColor(Color.ccPrimaryPurple)
+            Image(systemName: "chevron.right")
                 .foregroundColor(Color.ccPrimaryPurple)
         })
         .sheet(isPresented: $showSheet) {
@@ -132,7 +136,7 @@ struct DayView: View {
     @Environment(\.colorScheme) var colorScheme
     @Binding var month: Date
     var selectedDaysBleending: [String] = ["1", "2", "3", "4"]
-    var selectedDaysSymptoms: [String] = ["18", "19", "20", "21"]
+    var selectedDaysSymptoms: [String] = ["25", "26", "27", "28"]
     var colorDayToShow: Color {
         if day.number == Model().dateDayFormatter.string(from: Date()) && Calendar.current.component(.month, from: month) == Calendar.current.component(.month, from: Date()) || selectedDaysSymptoms.contains(day.number) || selectedDaysBleending.contains(day.number) {
             return Color.white
@@ -163,7 +167,6 @@ struct DayView: View {
                         .foregroundColor(colorDayToShow)
                 }
             )
-            .opacity(day.isWithinDisplayedMonth ? 1 : 0)
     }
 }
 struct CalendarView_Previews: PreviewProvider {

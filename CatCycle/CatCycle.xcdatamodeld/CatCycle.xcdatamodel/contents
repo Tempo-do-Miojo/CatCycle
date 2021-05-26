@@ -3,7 +3,7 @@
     <entity name="DayTrack" representedClassName="DayTrack" syncable="YES">
         <attribute name="bleedingRawValue" optional="YES" attributeType="String"/>
         <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
-        <attribute name="symptomsRawValue" optional="YES" attributeType="String"/>
+        <attribute name="symptomsRawValue" optional="YES" attributeType="Transformable" customClassName="[String]"/>
     </entity>
     <entity name="Item" representedClassName="Item" syncable="YES" codeGenerationType="class">
         <attribute name="timestamp" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
@@ -14,8 +14,8 @@
         <attribute name="periodLength" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
     </entity>
     <elements>
+        <element name="DayTrack" positionX="-54" positionY="18" width="128" height="74"/>
         <element name="Item" positionX="-63" positionY="-18" width="128" height="44"/>
         <element name="User" positionX="-63" positionY="-9" width="128" height="74"/>
-        <element name="DayTrack" positionX="-54" positionY="18" width="128" height="74"/>
     </elements>
 </model>
