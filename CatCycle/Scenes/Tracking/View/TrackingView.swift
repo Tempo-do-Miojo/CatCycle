@@ -72,7 +72,9 @@ struct TrackingView: View {
             }, type: .forwardBtn)
         }
         return CCButton(action: {
-            print("Save")
+            let bleeding = Bleeding(rawValue: bleedingSelected?.iconName ?? "")
+            let symptoms = symptomsSelected.map { Symptoms(rawValue: $0.iconName)! }
+            CoreDataManager.addDayTrack(date: Date(), bleeding: bleeding, symptoms: symptoms)
         }, type: .saveBtn)
     }
 
