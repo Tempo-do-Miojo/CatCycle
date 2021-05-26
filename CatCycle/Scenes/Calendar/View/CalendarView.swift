@@ -14,9 +14,8 @@ struct CalendarView: View {
     @State var selectedDay: Day?
     @StateObject var model = Model()
     @Binding var isPresented: Bool
-    var selectedDaysBleending: [String] = ["25", "26", "27", "28"]
+    @State var selectedDaysBleending = [String]()
     var selectedDaysSymptoms: [String] = ["1", "2", "3", "4"]
-        
     @State var month = Date()
     var body: some View {
         ZStack {
@@ -29,7 +28,7 @@ struct CalendarView: View {
                 VStack(spacing: 40) {
                     HeaderNavigation(isPresented: $isPresented)
                     HStack {
-                        HeaderCalendar(month: $month)
+                        HeaderCalendar(month: $month, selectedDaysBleending: $selectedDaysBleending)
                         Spacer()
                     }.padding(.leading, 24)
                 }
@@ -47,9 +46,9 @@ struct CalendarView: View {
                         let monthInt = Calendar.current.component(.month, from: month)
                         ForEach(model.generateDaysInMonth(for: model.getDate(month: monthInt)), id: \.self) { day in
                             ZStack {
-                                backgroundPeriod(day: day, selectedDays: selectedDaysBleending, isBleending: true)
+                                backgroundPeriod(day: day, selectedDays: model.getCoreDataDaysTracker(month: monthInt, year: 2021) , isBleending: true)
                                 backgroundPeriod(day: day, selectedDays: selectedDaysSymptoms, isBleending: false)
-                                DayView(day: day, isSelected: day == selectedDay, month: $month)
+                                DayView(day: day, isSelected: day == selectedDay, month: $month, selectedDaysBleending: $selectedDaysBleending)
                                     .onTapGesture {
                                         selectedDay = day
                                     }
@@ -91,6 +90,7 @@ struct HeaderCalendar: View {
     @StateObject var model = Model()
     @Binding var month: Date
     @State private var showSheet = false
+    @Binding var selectedDaysBleending: [String]
     var body: some View {
         Button(action: {
             self.showSheet = true
@@ -104,6 +104,10 @@ struct HeaderCalendar: View {
             DatePicker("mês", selection: $month, displayedComponents: .date)
                 .labelsHidden()
                 .datePickerStyle(WheelDatePickerStyle())
+                .onDisappear {
+                    let monthInt = Calendar.current.component(.month, from: month)
+                    selectedDaysBleending = model.getCoreDataDaysTracker(month: monthInt, year: 2021)
+                }
         }
     }
 }
@@ -132,11 +136,12 @@ struct HeaderNavigation: View {
 
 struct DayView: View {
     let day: Day
-    let isSelected: Bool
+    var isSelected: Bool
     @Environment(\.colorScheme) var colorScheme
     @Binding var month: Date
-    var selectedDaysBleending: [String] = ["1", "2", "3", "4"]
-    var selectedDaysSymptoms: [String] = ["25", "26", "27", "28"]
+    @Binding var selectedDaysBleending: [String]
+    var selectedDaysSymptoms: [String] = ["1", "2", "3", "4"]
+    var showSheet = false
     var colorDayToShow: Color {
         if day.number == Model().dateDayFormatter.string(from: Date()) && Calendar.current.component(.month, from: month) == Calendar.current.component(.month, from: Date()) || selectedDaysSymptoms.contains(day.number) || selectedDaysBleending.contains(day.number) {
             return Color.white
@@ -179,11 +184,12 @@ struct CalendarBaseView: View {
     @State var month = Date()
     @StateObject var model = Model()
     @State var selectedDay: Day?
+    @Binding var selectDaysBleeding: [String]
     var body: some View {
         VStack {
             VStack(spacing: 40) {
                 HStack {
-                    HeaderCalendar(month: $month)
+                    HeaderCalendar(month: $month, selectedDaysBleending: $selectDaysBleeding)
                     Spacer()
                 }.padding(.leading, 24)
             }
@@ -198,7 +204,7 @@ struct CalendarBaseView: View {
             HStack {
                 LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 0), count: 7), spacing: 0) {
                     ForEach(model.generateDaysInMonth(for: model.getDate(month: 01)), id: \.self) { day in
-                        DayView(day: day, isSelected: day == selectedDay, month: $month)
+                        DayView(day: day, isSelected: day == selectedDay, month: $month, selectedDaysBleending: $selectDaysBleeding)
                             .onTapGesture {
                                 selectedDay = day
                             }

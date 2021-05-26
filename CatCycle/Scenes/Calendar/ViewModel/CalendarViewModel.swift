@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftUI
+import CoreData
 // swiftlint:disable identifier_name
 
 struct Day: Hashable {
@@ -51,6 +52,19 @@ class Model: ObservableObject {
     }()
 
     private let selectedDate: Date = .init()
+    func getCoreDataDaysTracker(month: Int, year: Int) -> [String] {
+        let fetch = CoreDataManager.fetchDay(in: month, year: year)
+        var dates = [Date]()
+        var strDates = [String]()
+        for date in 0..<fetch.count {
+            dates.append(fetch[date].date ?? Date())
+        }
+        for str in 0..<dates.count {
+            let dateStr = dateDayFormatter.string(from: dates[str])
+            strDates.append(dateStr)
+        }
+        return strDates
+    }
 
     func getDate(month: Int) -> Date {
         dateComponents.month = month
