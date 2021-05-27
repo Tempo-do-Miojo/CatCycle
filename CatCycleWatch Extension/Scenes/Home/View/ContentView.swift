@@ -20,7 +20,7 @@ struct ContentView: View {
 
             }
             VStack(alignment: .leading) {
-                Information(titles: ["Day 20"], date: Date())
+                Information(date: Date())
                     .padding(EdgeInsets(top: 2, leading: 8, bottom: 0, trailing: 8))
 
             }

@@ -32,4 +32,11 @@ extension Date {
         components.second = -1
         return Calendar.current.date(byAdding: components, to: startOfDay)!
     }
+
+    func getDayNumber(date: Date) -> String {
+        let formatter = DateFormatter()
+        formatter.locale = .current
+        formatter.dateFormat = "dd"
+        return formatter.string(from: date)
+    }
 }
