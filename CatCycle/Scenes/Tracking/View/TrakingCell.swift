@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct TrackingCell: View {
+    @Environment(\.colorScheme) var colorScheme
 
     @State var model: InfoData
     var selected: Bool = false
@@ -37,12 +38,19 @@ struct TrackingCell: View {
                 .foregroundColor(.ccGray2)
         }
     }
-
     var colorCondition: (selected: Color, nonSelected: Color) {
         if model.type == .symptoms {
-            return (selected: .ccPrimaryPurple, nonSelected: .white)
+            if colorScheme == .light {
+                return (selected: .ccPrimaryPurple, nonSelected: .white)
+            } else {
+                return (selected: .ccPrimaryPurple, nonSelected: Color(.displayP3, red: 44/255, green: 44/255, blue: 46/255, opacity: 1))
+            }
         } else {
-            return (selected: .red, nonSelected: .white)
+            if colorScheme == .light {
+                return (selected: .red, nonSelected: .white)
+            } else {
+                return (selected: .red, nonSelected: Color(.displayP3, red: 44/255, green: 44/255, blue: 46/255, opacity: 1))
+            }
         }
     }
 }
