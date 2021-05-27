@@ -21,4 +21,22 @@ extension Date {
         components.second = -1
         return Calendar(identifier: .gregorian).date(byAdding: components, to: startOfMonth)!
     }
+
+    var startOfDay: Date {
+        return Calendar.current.startOfDay(for: self)
+    }
+
+    var endOfDay: Date {
+        var components = DateComponents()
+        components.day = 1
+        components.second = -1
+        return Calendar.current.date(byAdding: components, to: startOfDay)!
+    }
+
+    func getDayNumber(date: Date) -> String {
+        let formatter = DateFormatter()
+        formatter.locale = .current
+        formatter.dateFormat = "dd"
+        return formatter.string(from: date)
+    }
 }

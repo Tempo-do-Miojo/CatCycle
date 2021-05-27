@@ -20,10 +20,7 @@ struct ContentView: View {
 
             }
             VStack(alignment: .leading) {
-                Information(titles: ["Day 20"], infos: [
-                            .init(id: 0, iconName: "Bleeding_Medium", text: "Medium", type: .bleeding),
-                            .init(id: 1, iconName: "Symptoms_Cramps", text: "Cramps", type: .symptoms)]
-)
+                Information(date: Date())
                     .padding(EdgeInsets(top: 2, leading: 8, bottom: 0, trailing: 8))
 
             }

@@ -46,6 +46,14 @@
 		03BC099F2652AB1200DEC528 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 03BC099E2652AB1200DEC528 /* OpenSans-Regular.ttf */; };
 		03BC09A12652AB1900DEC528 /* OpenSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 03BC09A02652AB1900DEC528 /* OpenSans-SemiBold.ttf */; };
 		03BC09A32652ABA400DEC528 /* clarab.otf in Resources */ = {isa = PBXBuildFile; fileRef = 03BC09A22652ABA400DEC528 /* clarab.otf */; };
+		03E11A35265FCB850014BEB7 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A6FAF8265BF35A00CC3ADE /* CoreDataManager.swift */; };
+		03E11A36265FCB8F0014BEB7 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB6E6FF264D5270009EA067 /* Persistence.swift */; };
+		03E11A37265FCBA40014BEB7 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B120C6265D610B00DFF4EB /* User+CoreDataClass.swift */; };
+		03E11A38265FCC560014BEB7 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B120C7265D610B00DFF4EB /* User+CoreDataProperties.swift */; };
+		03E11A39265FCC580014BEB7 /* DayTrack+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B120C4265D610B00DFF4EB /* DayTrack+CoreDataClass.swift */; };
+		03E11A3A265FCC5B0014BEB7 /* DayTrack+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B120C5265D610B00DFF4EB /* DayTrack+CoreDataProperties.swift */; };
+		03E11A3B265FCC620014BEB7 /* TrackingObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036979BE265BDEE600A2671E /* TrackingObjects.swift */; };
+		03E11A3C265FCCE20014BEB7 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B120BE265D33D000DFF4EB /* Date.swift */; };
 		7B2DA29B2654017700FC47F9 /* DayNow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2DA29A2654017700FC47F9 /* DayNow.swift */; };
 		7B2DA29D265401BA00FC47F9 /* DayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2DA29C265401BA00FC47F9 /* DayViewModel.swift */; };
 		7B3559632653E059007BE1ED /* ColorCycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8142602653DEDD00D38999 /* ColorCycle.swift */; };
@@ -1080,10 +1088,14 @@
 				036979B12656A86B00A2671E /* HomeViewModel.swift in Sources */,
 				030922B12655742200B8F34F /* Fonts.swift in Sources */,
 				030922B22655742200B8F34F /* Image.swift in Sources */,
+				03E11A36265FCB8F0014BEB7 /* Persistence.swift in Sources */,
 				7B8142132652A4E800D38999 /* NotificationController.swift in Sources */,
 				030922BC2655744200B8F34F /* Information.swift in Sources */,
+				03E11A39265FCC580014BEB7 /* DayTrack+CoreDataClass.swift in Sources */,
 				030922B32655742200B8F34F /* Color.swift in Sources */,
 				7B8142112652A4E800D38999 /* ContentView.swift in Sources */,
+				03E11A3B265FCC620014BEB7 /* TrackingObjects.swift in Sources */,
+				03E11A37265FCBA40014BEB7 /* User+CoreDataClass.swift in Sources */,
 				7B3559632653E059007BE1ED /* ColorCycle.swift in Sources */,
 				030922B82655742C00B8F34F /* SegmentControl.swift in Sources */,
 				7B8142172652A4E800D38999 /* ComplicationController.swift in Sources */,
@@ -1094,7 +1106,11 @@
 				7B81420F2652A4E800D38999 /* CatCycleApp.swift in Sources */,
 				7B81425F2653DEC100D38999 /* CycleView.swift in Sources */,
 				7B8142152652A4E800D38999 /* NotificationView.swift in Sources */,
+				03E11A3A265FCC5B0014BEB7 /* DayTrack+CoreDataProperties.swift in Sources */,
+				03E11A38265FCC560014BEB7 /* User+CoreDataProperties.swift in Sources */,
 				030922BB2655743F00B8F34F /* InformationViewModel.swift in Sources */,
+				03E11A35265FCB850014BEB7 /* CoreDataManager.swift in Sources */,
+				03E11A3C265FCCE20014BEB7 /* Date.swift in Sources */,
 				03B120CC265E720400DFF4EB /* AddButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

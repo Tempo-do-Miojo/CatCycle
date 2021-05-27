@@ -14,8 +14,8 @@ struct Information: View {
     var isSectionEnable: Bool = true
     private var isWatchOS: Bool = false
 
-    init(titles: [String], infos: [InfoData]) {
-        viewModel = InformationViewModel(titles: titles, info: infos)
+    init(date: Date) {
+        viewModel = InformationViewModel(date: date)
 
         #if os(watchOS)
             isWatchOS = true
@@ -35,7 +35,7 @@ struct Information: View {
                 }
             }
 
-            if viewModel.info.isEmpty && !isWatchOS {
+            if viewModel.infos.isEmpty && !isWatchOS {
                 Rectangle()
                     .foregroundColor(.clear)
                     .background(EmptyStateView().padding(.bottom, 24))
@@ -76,7 +76,7 @@ struct Information: View {
 
 struct Information_Previews: PreviewProvider {
     static var previews: some View {
-        Information(titles: [], infos: [])
+        Information(date: Date())
             .previewLayout(.sizeThatFits)
     }
 }

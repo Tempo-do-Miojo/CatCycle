@@ -98,4 +98,41 @@ class CoreDataManager {
 
         return trackedDays
     }
+
+    static func fetchDay(in date: Date) -> DayTrack? {
+        addDayTrack(date: Date(), bleeding: .heavy, symptoms: [.cramps, .headache])
+
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd-MM-yyyy"
+
+        let initialDate = date.startOfDay
+        let lastDate = date.endOfDay
+
+        guard let nsInitialDate = initialDate as NSDate?,
+              let nsLastDate = lastDate as NSDate? else {
+            return nil
+        }
+
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "DayTrack")
+        let predicate = NSPredicate(format: "date >= %@ AND date <= %@",
+                                    nsInitialDate,
+                                    nsLastDate)
+        request.predicate = predicate
+
+        do {
+            let result = try context.fetch(request)
+            for data in result {
+                guard let dayTrack = data as? DayTrack else {
+                    return nil
+                }
+                return dayTrack
+            }
+        } catch {
+            let nsError = error as NSError
+            fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+        }
+
+        return nil
+    }
+
 }
