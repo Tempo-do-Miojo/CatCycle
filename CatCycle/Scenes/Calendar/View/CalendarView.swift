@@ -32,32 +32,10 @@ struct CalendarView: View {
                         Spacer()
                     }.padding(.leading, 24)
                 }
-                HStack {
-                    LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 0), count: 7), spacing: 0) {
-                        ForEach(model.week, id: \.self) { weekDay in
-                            Text(weekDay)
-                                .font(Font.ccParagraph2)
-                                .foregroundColor(colorScheme == .light ? Color.ccGray1 : Color.ccGray3)
-                        }
-                    }
-                }.padding(.horizontal, 5)
-                HStack {
-                    LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 0), count: 7), spacing: 0) {
-                        let monthInt = Calendar.current.component(.month, from: month)
-                        let yearInt = Calendar.current.component(.year, from: month)
-                        ForEach(model.generateDaysInMonth(for: model.getDate(month: monthInt)), id: \.self) { day in
-                            ZStack {
-                                backgroundPeriod(day: day, selectedDays: model.getCoreDataDaysTracker(month: monthInt, year: yearInt) , isBleending: true)
-                                //backgroundPeriod(day: day, selectedDays: selectedDaysSymptoms, isBleending: false)
-                                DayView(day: day, isSelected: day == selectedDay, month: $month, selectedDaysBleending: $selectedDaysBleending)
-                                    .onTapGesture {
-                                        selectedDay = day
-                                    }
-                            }
-                            .opacity(day.isWithinDisplayedMonth ? 1 : 0)
-                        }
-                    }
-                }.padding(.horizontal, 10)
+                weekGrid
+                    .padding(.horizontal, 5)
+                daysGrid
+                    .padding(.horizontal, 10)
                 Spacer()
             }
         }
@@ -65,6 +43,39 @@ struct CalendarView: View {
             TrackingView(trackedDate: day.date)
         }
     }
+
+    var weekGrid: some View {
+        HStack {
+            LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 0), count: 7), spacing: 0) {
+                ForEach(model.week, id: \.self) { weekDay in
+                    Text(weekDay)
+                        .font(Font.ccParagraph2)
+                        .foregroundColor(colorScheme == .light ? Color.ccGray1 : Color.ccGray3)
+                }
+            }
+        }
+    }
+
+    var daysGrid: some View {
+        HStack {
+            LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 0), count: 7), spacing: 0) {
+                let monthInt = Calendar.current.component(.month, from: month)
+                let yearInt = Calendar.current.component(.year, from: month)
+                ForEach(model.generateDaysInMonth(for: model.getDate(month: monthInt)), id: \.self) { day in
+                    ZStack {
+                        backgroundPeriod(day: day, selectedDays: model.getCoreDataDaysTracker(month: monthInt, year: yearInt) , isBleending: true)
+                        //backgroundPeriod(day: day, selectedDays: selectedDaysSymptoms, isBleending: false)
+                        DayView(day: day, isSelected: day == selectedDay, month: $month, selectedDaysBleending: $selectedDaysBleending)
+                            .onTapGesture {
+                                selectedDay = day
+                            }
+                    }
+                    .opacity(day.isWithinDisplayedMonth ? 1 : 0)
+                }
+            }
+        }
+    }
+
     @ViewBuilder fileprivate func backgroundPeriod(day: Day, selectedDays: [String], isBleending: Bool) -> some View {
         if selectedDays.contains(day.number) {
             if selectedDays.first == selectedDays.last {
@@ -185,40 +196,5 @@ struct DayView: View {
 struct CalendarView_Previews: PreviewProvider {
     static var previews: some View {
         CalendarView(isPresented: .constant(true))
-    }
-}
-
-struct CalendarBaseView: View {
-    @State var month = Date()
-    @StateObject var model = Model()
-    @State var selectedDay: Day?
-    @Binding var selectDaysBleeding: [String]
-    var body: some View {
-        VStack {
-            VStack(spacing: 40) {
-                HStack {
-                    HeaderCalendar(month: $month, selectedDaysBleending: $selectDaysBleeding)
-                    Spacer()
-                }.padding(.leading, 24)
-            }
-            HStack {
-                LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 0), count: 7), spacing: 0) {
-                    ForEach(model.week, id: \.self) { weekDay in
-                        Text(weekDay)
-                            .font(Font.ccParagraph2)
-                    }
-                }
-            }.padding(.horizontal, 10)
-            HStack {
-                LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 0), count: 7), spacing: 0) {
-                    ForEach(model.generateDaysInMonth(for: model.getDate(month: 01)), id: \.self) { day in
-                        DayView(day: day, isSelected: day == selectedDay, month: $month, selectedDaysBleending: $selectDaysBleeding)
-                            .onTapGesture {
-                                selectedDay = day
-                            }
-                    }
-                }
-            }.padding(.horizontal, 13)
-        }
     }
 }

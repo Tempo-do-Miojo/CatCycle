@@ -28,6 +28,7 @@ struct NameView: View {
                         .multilineTextAlignment(.center)
                     TextField("Your name...", text: $username)
                         .textFieldStyle(CCTextFieldStyle())
+                        .foregroundColor(Color.black)
                         .padding(.top, 6)
                         .padding(.horizontal, 8)
                         .layoutPriority(1000)
