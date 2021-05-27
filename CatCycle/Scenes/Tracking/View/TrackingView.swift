@@ -49,7 +49,9 @@ struct TrackingView: View {
                     symptoms.forEach { symptoms in
                         symptoms.forEach { symptom in
                             if items.contains(symptom.id) {
-                                symptomsSelected.append(symptom)
+                                if !symptomsSelected.contains(symptom) {
+                                    symptomsSelected.append(symptom)
+                                }
                             }
                         }
                     }

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct InfoData: Identifiable {
+struct InfoData: Identifiable, Hashable {
     // swiftlint:disable identifier_name
     var id: Int
 

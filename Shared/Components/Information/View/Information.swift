@@ -14,8 +14,8 @@ struct Information: View {
     var isSectionEnable: Bool = true
     private var isWatchOS: Bool = false
 
-    init(date: Date) {
-        viewModel = InformationViewModel(date: date)
+    init(date: Date?) {
+        viewModel = InformationViewModel(date: date ?? Date())
 
         #if os(watchOS)
             isWatchOS = true
