@@ -14,8 +14,8 @@ struct Information: View {
     var isSectionEnable: Bool = true
     private var isWatchOS: Bool = false
 
-    init(titles: [String], infos: [InfoData]) {
-        viewModel = InformationViewModel(titles: titles, info: infos)
+    init(titles: [String], date: Date) {
+        viewModel = InformationViewModel(titles: titles, date: date)
 
         #if os(watchOS)
             isWatchOS = true
@@ -76,7 +76,7 @@ struct Information: View {
 
 struct Information_Previews: PreviewProvider {
     static var previews: some View {
-        Information(titles: [], infos: [])
+        Information(titles: [], date: Date())
             .previewLayout(.sizeThatFits)
     }
 }
