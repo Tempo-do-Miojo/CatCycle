@@ -76,6 +76,7 @@ struct TrackingView: View {
             let bleeding = Bleeding(rawValue: bleedingSelected?.iconName ?? "")
             let symptoms = symptomsSelected.map { Symptoms(rawValue: $0.iconName)! }
             CoreDataManager.addDayTrack(date: trackedDate, bleeding: bleeding, symptoms: symptoms)
+            presentationMode.wrappedValue.dismiss()
         }, type: .saveBtn)
     }
 
