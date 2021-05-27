@@ -31,11 +31,9 @@ class DayViewModel {
     static func getNumberFromDate(date: Date!) -> Int {
         return Calendar.current.dateComponents([.day], from: date).day ?? 01
     }
-    
     static func getNumberFromMonth(date: Date!) -> Int {
         return Calendar.current.dateComponents([.month], from: date).month ?? 01
     }
-    
     static func getNumberFromYear(date: Date!) -> Int {
         return Calendar.current.dateComponents([.year], from: date).year ?? 2021
     }

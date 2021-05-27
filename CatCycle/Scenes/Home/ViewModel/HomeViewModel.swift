@@ -25,7 +25,6 @@ struct HomeViewModel {
         let finishDate: CGFloat = periodLenght / CGFloat(DayViewModel.getNumberOfDaysInMonth(date: dateInitialBleending))
         return finishDate
     }
-    
     func getFirstBleeding(date: Date!) -> Date {
         guard let user = CoreDataManager.fetchUser(),
               let dateInitialBleending = user.initialDate else {return date}
