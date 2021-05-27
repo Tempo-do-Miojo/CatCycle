@@ -100,7 +100,6 @@ class CoreDataManager {
     }
 
     static func fetchDay(in date: Date) -> DayTrack? {
-        addDayTrack(date: Date(), bleeding: .heavy, symptoms: [.cramps, .headache])
 
         let formatter = DateFormatter()
         formatter.dateFormat = "dd-MM-yyyy"
